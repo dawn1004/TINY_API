@@ -8,10 +8,13 @@ from .modelBot import model as modelo
 
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from .serializers import TinyResponseSerializer
 
-from . models import Question, Calendar
+from . models import Question, Calendar, userIntent
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 
 
 def index(request):
@@ -35,6 +38,7 @@ def index(request):
 
 
 @api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
 def sendQuery(request, query):
     inp = query
     asnw = "blank"
@@ -62,3 +66,31 @@ def sendQuery(request, query):
 
         serializer = TinyResponseSerializer(tiny_response)
         return Response(serializer.data)
+
+
+@api_view(['POST', ])
+def createUser(request, username, password, name, intent):
+    if request.method == 'POST':
+        try:
+            user = User.objects.create_user(username=username,
+                                            email='jlennon@beatles.com111',
+                                            password=password)
+            intent = userIntent(intent=intent, user=user)
+
+            intent.save()
+        except:
+            return Response({'error': 'Username is already taken'})
+
+    return Response({'username': password})
+    # http://127.0.0.1:8000/tinyAPI/createUser/dawn11232123/124553/dawnhae/school related/
+
+
+@api_view(['GET', ])
+def adminLogin(request, username, password):
+    admin = authenticate(request, username=username, password=password)
+    if admin is not None:
+        if admin.is_staff:
+            return Response({'result': 'found', 'username': username, 'password': password})
+
+    return Response({'result': 'not found'})
+    # http://127.0.0.1:8000/tinyAPI/adminLogin/kishinki/dawn123741/
