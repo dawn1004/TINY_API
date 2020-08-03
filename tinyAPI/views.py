@@ -10,9 +10,11 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
-from .serializers import TinyResponseSerializer
+from .serializers import TinyResponseSerializer, CourseSerializer
+# from rest_framework import viewsets
 
-from . models import Question, Calendar, userIntent
+from . models import Question, Calendar, userIntent, Course
+from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
@@ -68,12 +70,79 @@ def sendQuery(request, query):
         return Response(serializer.data)
 
 
+####################################Courses things#################################################
+
+# get all courses
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def viewAllCourses(request):
+    courses = Course.objects.all()
+
+    serializer = CourseSerializer(courses, many=True)
+    return Response(serializer.data)
+
+
+# get course by college
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def getCourseByCollege(request, college):
+    courses = Course.objects.filter(college_acronym=college.upper())
+    if courses.count() == 0:
+        courses = Course.objects.filter(college__icontains=college)
+    if courses.count() == 0:
+        return Response({'Message': 'No Courses Found'}, status=status.HTTP_404_NOT_FOUND)
+    serializer = CourseSerializer(courses, many=True)
+    return Response(serializer.data)
+
+
+# delete course
+@api_view(['DELETE', ])
+@permission_classes((IsAuthenticated,))
+def deleteCourse(request, id):
+    try:
+        course = Course.objects.get(id=id)
+    except Course.DoesNotExist:
+        return Response({'Message': 'Id Not Found'}, status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == "DELETE":
+        operation = course.delete()
+        data = {}
+        if operation:
+
+            data["success"] = "delete successful"
+        else:
+            data["failed"] = "delete failed"
+
+        return Response(data)
+
+
+# add course
 @api_view(['POST', ])
-def createUser(request, username, password, name, intent):
+def addCourse(request, course_name, college, acronym, campus):
+    try:
+        newcourse = Course.objects.create(
+            course=course_name,
+            college=college,
+            college_acronym=acronym,
+            campus=campus
+        )
+        newcourse.save()
+    except:
+        return Response({'error': 'idk'})
+    return Response({'Message': 'Succesfully added'})
+
+
+####################################User things#################################################
+
+
+@api_view(['POST', ])
+def createUser(request, username, password, email, firstname, lastname, intent):
     if request.method == 'POST':
         try:
             user = User.objects.create_user(username=username,
-                                            email='jlennon@beatles.com111',
+                                            email=email,
+                                            first_name=firstname,
+                                            last_name=lastname,
                                             password=password)
             intent = userIntent(intent=intent, user=user)
 
@@ -81,7 +150,9 @@ def createUser(request, username, password, name, intent):
         except:
             return Response({'error': 'Username is already taken'})
 
-    return Response({'username': password})
+        intent.save()
+
+    return Response({'message': "created success"})
     # http://127.0.0.1:8000/tinyAPI/createUser/dawn11232123/124553/dawnhae/school related/
 
 

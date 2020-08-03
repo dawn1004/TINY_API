@@ -18,6 +18,13 @@ class Calendar(models.Model):
     remark = models.CharField(max_length=500)
 
 
+class Course(models.Model):
+    course = models.CharField(max_length=500)
+    college = models.CharField(max_length=500)
+    college_acronym = models.CharField(max_length=100, default='unavailable')
+    campus = models.CharField(max_length=500)
+
+
 class userIntent(models.Model):
     intent = models.CharField(max_length=200)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

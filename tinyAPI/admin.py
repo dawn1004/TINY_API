@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Question, Calendar, userIntent
+from . models import Question, Calendar, userIntent, Course
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -14,6 +14,11 @@ class userIntentAdmin(admin.ModelAdmin):
     list_display = ('intent', 'user')
 
 
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('course', 'college', 'college_acronym', 'campus')
+
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Calendar, CalendarAdmin)
 admin.site.register(userIntent, userIntentAdmin)
+admin.site.register(Course, CourseAdmin)
