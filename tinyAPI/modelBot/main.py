@@ -59,11 +59,14 @@ def chat():
         results_index = numpy.argmax(results)
         tag = labels[results_index]
 
-        if results[results_index] > 0.9:
+        if results[results_index] > 0.95:
             for tg in data["intents"]:
                 if tg['tag'] == tag:
                     responses = tg['responses']
+            print("percentage: {}".format(results[results_index]))
 
+            if len(responses) == 1 and "^" in responses[0]:
+                print(responses[0])  # meaning need to look in database
             print(random.choice(responses))
         else:
             print("i hvae no response for that")

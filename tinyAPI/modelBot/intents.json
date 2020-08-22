@@ -22,9 +22,9 @@
         "Whats up"
       ],
       "responses": [
-        "Hello Bitch!",
-        "hi din powz",
-        "taena mo"
+        "Hello Im TInY how can i help you?",
+        "Hi, I'm TInY im here to inform you ",
+        "Hello how can i help you?"
       ],
       "context_set": ""
     },
@@ -38,24 +38,9 @@
         "Have a Good day"
       ],
       "responses": [
-        "Sad to see you go :(",
+        "Goodbye and Thank you",
         "Talk to you later",
-        "Goodbye!"
-      ],
-      "context_set": ""
-    },
-    {
-      "tag": "age",
-      "patterns": [
-        "how old",
-        "how old is tim",
-        "what is your age",
-        "how old are you",
-        "age?"
-      ],
-      "responses": [
-        "I am 18 years old!",
-        "18 years young!"
+        "Nice talking with you, Goodbye!"
       ],
       "context_set": ""
     },
@@ -69,205 +54,2201 @@
       "responses": [
         "My name is TInY",
         "I'm TInY!",
-        "I'm TInY aka To INform You"
+        "I'm To INform You aka TInY"
       ],
       "context_set": ""
     },
     {
-      "tag": "shop",
+      "tag": "bulsu_president",
+      "database": "executives",
       "patterns": [
-        "Id like to buy something",
-        "whats on the menu",
-        "what do you reccommend?",
-        "could i get something to eat"
+        "Who is the President of Bulacan State University?",
+        "University President",
+        "Bulacan State University President",
+        "Current President of Bulacan State University",
+        "Who is the President of BulSU?",
+        "University President",
+        "BulSU President",
+        "Current President of BulSU"
       ],
       "responses": [
-        "We sell chocolate chip cookies for $2!",
-        "Cookies are on the menu!"
+        "executives^president"
       ],
       "context_set": ""
     },
     {
-      "tag": "hours",
+      "tag": "Executive Vice President",
+      "database": "executives",
       "patterns": [
-        "when are you guys open",
-        "what are your hours",
-        "hours of operation"
+        "Who is the Executive Vice President of Bulacan State University?",
+        "University Executive Vice President",
+        "Bulacan State University Executive Vice President",
+        "Current Executive Vice President of Bulacan State University",
+        "Who is the Executive Vice President of BulSU?",
+        "University Executive Vice President",
+        "BulSU Executive Vice President",
+        "Current Executive Vice President of BulSU"
       ],
       "responses": [
-        "We are open 7am-4pm Monday-Friday!"
+        "executives^Executive Vice President"
       ],
       "context_set": ""
     },
     {
-      "tag": "meme",
+      "tag": "Vice President for Research",
+      "database": "executives",
       "patterns": [
-        "are you meme?"
+        "Who is the Vice President for Research, Development and Extension of Bulacan State University?",
+        "University Vice President for Research, Development and Extension",
+        "Bulacan State University Vice President for Research, Development and Extension",
+        "Current Vice President for Research, Development and Extension of Bulacan State University",
+        "Who is the Vice President for Research, Development and Extension of BulSU?",
+        "University Vice President for Research, Development and Extension ",
+        "BulSU Vice President for Research, Development and Extension",
+        "Current Vice President for Research, Development and Extension of BulSU"
       ],
       "responses": [
-        "i am not meme"
+        "executives^Vice President for Research"
       ],
       "context_set": ""
     },
     {
-      "tag": "hit",
+      "tag": "Vice President for Administration and Finance",
+      "database": "executives",
       "patterns": [
-        "asdasd you meme?"
+        "Who is the Vice President for Administration and Finance of Bulacan State University?",
+        "University Vice President for Administration and Finance",
+        "Bulacan State University Vice President for Administration and Finance",
+        "Current Vice President for Administration and Finance of Bulacan State University",
+        "Who is the Vice President for Administration and Finance of BulSU?",
+        "University Vice President for Administration and Finance",
+        "BulSU Vice President for Administration and Finance",
+        "Current Vice President for Administration and Finance of BulSU"
       ],
       "responses": [
-        "i asdasd not meme"
+        "executives^Vice President for Administration and Finance"
       ],
       "context_set": ""
     },
     {
-      "tag": "developers",
+      "tag": "Vice President for Academic Affairs",
+      "database": "executives",
       "patterns": [
-        "who develop you?",
-        "whos your creator?"
+        "Who is the Vice President for Academic Affairs of Bulacan State University?",
+        "University Vice President for Academic Affairs",
+        "Bulacan State University Vice President for Academic Affairs",
+        "Current Vice President for Academic Affairs of Bulacan State University",
+        "Who is the Vice President for Academic Affairs of BulSU?",
+        "University Vice President for Academic Affairs",
+        "BulSU Vice President for Academic Affairs",
+        "executives^Current Vice President for Academic Affairs of BulSU"
       ],
       "responses": [
-        "i develop by dawn "
+        "Vice President for Academic Affairs"
       ],
       "context_set": ""
     },
     {
-      "tag": "pusa",
+      "tag": "dean of graduate school",
+      "database": "deans",
       "patterns": [
-        "favorite cat"
+        "Who is the dean of graduate school?",
+        "Graduate school dean",
+        "Dean of graduate school",
+        "deans^current dean of graduate school"
       ],
       "responses": [
-        "meow meow and panda "
+        "deans^graduate school"
       ],
       "context_set": ""
     },
     {
-      "tag": "mother",
+      "tag": "dean of College of Architecture and Fine Arts",
+      "database": "deans",
       "patterns": [
-        "your mothers name?",
-        "who's your mother?",
-        "your mother is?"
+        "Who is the dean of College of Architecture and Fine Arts?",
+        "College of Architecture and Fine Arts dean",
+        "Dean of College of Architecture and Fine Arts",
+        "current dean of College of Architecture and Fine Arts",
+        "Who is the dean of CAFA?",
+        "CAFA dean",
+        "Dean of CAFA",
+        "Current dean of CAFA"
       ],
       "responses": [
-        "teresita bugay"
+        "deans^CAFA"
       ],
       "context_set": ""
     },
     {
-      "tag": "father",
+      "tag": "dean of College of Arts and Letters",
+      "database": "deans",
       "patterns": [
-        "your father name?",
-        "who's your father?",
-        "your father is?"
+        "Who is the dean of College of Arts and Letters?",
+        "College of Arts and Letters dean",
+        "Dean of College of Arts and Letters",
+        "Current dean of College of Arts and Letters",
+        "Who is the dean of CAL?",
+        "CAL dean",
+        "Dean of CAL",
+        "Current dean of CAL"
       ],
       "responses": [
-        "i have no father"
+        "deans^CAL"
       ],
       "context_set": ""
     },
     {
-      "tag": "sister",
+      "tag": "dean of College of Business Administration",
+      "database": "deans",
       "patterns": [
-        "your sister name?",
-        "who's your sister?",
-        "your father is?"
+        "Who is the dean of College of Business Administration?",
+        "College of Business Administration dean",
+        "Dean of College of Business Administration",
+        "Current dean of College of Business Administration",
+        "Who is the dean of CBA?",
+        "CBA dean",
+        "Dean of CBA",
+        "Current dean of CBA"
       ],
       "responses": [
-        "shaira"
+        "deans^CBA"
       ],
       "context_set": ""
     },
     {
-      "tag": "president",
+      "tag": "dean of College of Criminal Justice Education",
+      "database": "deans",
       "patterns": [
-        "who is president?",
-        "who is the president?",
-        "the president is?"
+        "Who is the dean of College of Criminal Justice Education?",
+        "College of Criminal Justice Education dean",
+        "Dean of College of Criminal Justice Education",
+        "Current dean of College of Criminal Justice Education",
+        "Who is the dean of CCJE?",
+        "CCJE dean",
+        "Dean of CCJE",
+        "Current dean of CCJE"
       ],
       "responses": [
-        "pres"
+        "deans^CCJE"
       ],
       "context_set": ""
     },
     {
-      "tag": "vice_president",
+      "tag": "dean of College of Hospitality and Tourism Management",
+      "database": "deans",
       "patterns": [
-        "who is vice president?",
-        "who is the vice president?",
-        "the vice president is?"
+        "Who is the dean of College of Hospitality and Tourism Management?",
+        "College of Hospitality and Tourism Management dean",
+        "Dean of College of Hospitality and Tourism Management",
+        "Current dean of College of Hospitality and Tourism Management",
+        "Who is the dean of CHTM?",
+        "CHTM dean",
+        "Dean of CHTM",
+        "Current dean of CHTM"
       ],
       "responses": [
-        "vice pres"
+        "deans^CHTM"
       ],
       "context_set": ""
     },
     {
-      "tag": "siblings",
+      "tag": "dean of College of Information and Communications Technology",
+      "database": "deans",
       "patterns": [
-        "your siblings names?",
-        "who's your siblings?",
-        "your siblings is?"
+        "Who is the dean of College of Information and Communications Technology?",
+        "College of Information and Communications Technology dean",
+        "Dean of College of Information and Communications Technology",
+        "Current dean of College of Information and Communications Technology",
+        "Who is the dean of CICT?",
+        "CICT dean",
+        "Dean of CICT",
+        "Current dean of CICT"
       ],
       "responses": [
-        "don,shaira,nico"
+        "deans^CICT"
       ],
       "context_set": ""
     },
     {
-      "tag": "Num siblings",
+      "tag": "dean of College of Industrial Technology",
+      "database": "deans",
       "patterns": [
-        "how many siblings you have??",
-        "number of siblings?"
+        "Who is the dean of College of Industrial Technology?",
+        "College of Industrial Technology dean",
+        "Dean of College of Industrial Technology",
+        "Current dean of College of Industrial Technology",
+        "Who is the dean of CIT?",
+        "CIT dean",
+        "Dean of CIT",
+        "Current dean of CIT"
       ],
       "responses": [
-        "we are 4"
+        "deans^CIT"
       ],
       "context_set": ""
     },
     {
-      "tag": "president",
+      "tag": "dean of College of Law",
+      "database": "deans",
       "patterns": [
-        "who is bulsu president?",
-        "bulsu president?",
-        "president of bsu"
+        "Who is the dean of College of Law?",
+        "College of Law dean",
+        "Dean of College of Law",
+        "Current dean of College of Law",
+        "Who is the dean of CLaw?",
+        "CLaw dean",
+        "Dean of CLaw",
+        "Current dean of CLaw"
       ],
       "responses": [
-        "mod^1"
+        "deans^CLaw"
       ],
       "context_set": ""
     },
     {
-      "tag": "vie-president",
+      "tag": "dean of College of Nursing",
+      "database": "deans",
       "patterns": [
-        "who is bulsu vice president?",
-        "bulsu vice president?",
-        "vice president of bsu"
+        "Who is the dean of College of Nursing?",
+        "College of Nursing dean",
+        "Dean of College of Nursing",
+        "Current dean of College of Nursing",
+        "Who is the dean of CON?",
+        "CON dean",
+        "Dean of CON",
+        "Current dean of CON"
       ],
       "responses": [
-        "mod^2"
+        "deans^CON"
       ],
       "context_set": ""
     },
     {
-      "tag": "event_tommorow",
+      "tag": "dean of College of Engineering",
+      "database": "deans",
       "patterns": [
-        "do we have class in bulsu tommorow?",
-        "class update tommorow",
-        "class suspension tommorow"
+        "Who is the dean of College of Engineering?",
+        "College of Engineering dean",
+        "Dean of College of Engineering",
+        "Current dean of College of Engineering",
+        "Who is the dean of COE?",
+        "COE dean",
+        "Dean of COE",
+        "Current dean of COE"
       ],
       "responses": [
-        "date^1"
+        "deans^COE"
       ],
       "context_set": ""
     },
     {
-      "tag": "event_today",
+      "tag": "dean of College of Education",
+      "database": "deans",
       "patterns": [
-        "do we have class in bulsu today?",
-        "class update today",
-        "class suspension today"
+        "Who is the dean of College of Education?",
+        "College of Education dean",
+        "Dean of College of Education",
+        "Current dean of College of Education",
+        "Who is the dean of COED?",
+        "COED dean",
+        "Dean of COED",
+        "Current dean of COED"
       ],
       "responses": [
-        "date^2"
+        "deans^COED"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "dean of College of Science",
+      "database": "deans",
+      "patterns": [
+        "Who is the dean of College of Science?",
+        "College of Science dean",
+        "Dean of College of Science",
+        "Current dean of College of Science",
+        "Who is the dean of CS?",
+        "CS dean",
+        "Dean of CS",
+        "Current dean of CS"
+      ],
+      "responses": [
+        "deans^CS"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "dean of College of Sports, Exercise and Recreation",
+      "database": "deans",
+      "patterns": [
+        "Who is the dean of College of Sports, Exercise and Recreation?",
+        "College of Sports, Exercise and Recreation dean",
+        "Dean of College of Sports, Exercise and Recreation",
+        "Current dean of College of Sports, Exercise and Recreation",
+        "Who is the dean of CSER?",
+        "CSER dean",
+        "Dean of CSER",
+        "Current dean of CSER"
+      ],
+      "responses": [
+        "deans^CSER"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "dean of College of Social Sciences and Philosophy",
+      "database": "deans",
+      "patterns": [
+        "Who is the dean of College of Social Sciences and Philosophy?",
+        "College of Social Sciences and Philosophy dean",
+        "Dean of College of Social Sciences and Philosophy",
+        "Current dean of College of Social Sciences and Philosophy",
+        "Who is the dean of CSSP?",
+        "CSSP dean",
+        "Dean of CSSP",
+        "Current dean of CSSP"
+      ],
+      "responses": [
+        "deans^CSSP"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Location of CSSP",
+      "patterns": [
+        "What building was CSSP located?",
+        "Location of CSSP",
+        "College of Social Science and Psychology main location",
+        "Where can i find the CSSP?",
+        "Where can i locate the CSSP?",
+        "College of Social Science and Psychology building",
+        "CSSP building",
+        "CSSP location"
+      ],
+      "responses": [
+        "The College of Social Science and Psychology (CSSP) is located in front of the BulSU's 4th gate. This building is named Mendoza Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Location of CSER",
+      "patterns": [
+        "What building was CSER located?",
+        "Location of CSER",
+        "College of Sports, Exercise and Recreation main location",
+        "Where can i find the CSER?",
+        "Where can i locate the CSER?",
+        "College of Sports, Exercise and Recreation building",
+        "CSER building",
+        "CSER location"
+      ],
+      "responses": [
+        "The College of Sports, Exercise and Recreation (CSER) is located in Chess Institute in front of Federizo Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Location of LAB HIGH",
+      "patterns": [
+        "What building was LAB HIGH located?",
+        "Location of LAB HIGH",
+        "Laboratory Highschool main location",
+        "Where can i find the LAB HIGH?",
+        "Where can i locate the CICT?",
+        "Where can i locate the LAB HIGH?",
+        "Laboratory Highschool building",
+        "LAB HIGH building",
+        "LAB HIGH location"
+      ],
+      "responses": [
+        "The Laboratory Highschool building is located in front of BulSU Heroes Park and Roxas Hall. This building is named Carpio Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CCJE location",
+      "patterns": [
+        "Location of CCJE",
+        "College of Criminal Justice Education main location",
+        "Where can i find the CCJE?",
+        "Where can i locate the CCJE?",
+        "College of Criminal Justice Education building",
+        "CCJE building",
+        "CCJE location"
+      ],
+      "responses": [
+        "The College of Criminal Justice Education (CCJE) is located in front of the BulSU's 3rd gate."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CHTM location",
+      "patterns": [
+        "Location of CHTM",
+        "College of Hospitality and Tourism Management main location",
+        "Where can i find the CHTM?",
+        "Where can i locate the CHTM?",
+        "College of Hospitality and Tourism Management building",
+        "CHTM building",
+        "CHTM location"
+      ],
+      "responses": [
+        "The College of Hospitality and Tourism Management (CHTM) is located beside the BulSU hostel building."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "COED building",
+      "patterns": [
+        "What building was COED located?",
+        "Location of COED",
+        "College of Education main location",
+        "Where can i find the COED?",
+        "Where can i locate the COED?",
+        "College of Education building",
+        "COED location",
+        "COED building"
+      ],
+      "responses": [
+        "The College of Education (COED) is located in front of BulSU Heroes Park. This building is named Roxas Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CAFA location",
+      "patterns": [
+        "What building was CAFA located?",
+        "Location of CAFA",
+        "College of Architecture and Fine Arts main location",
+        "Where can i find the CAFA?",
+        "Where can i locate the CAFA?",
+        "College of Architecture and Fine Arts building",
+        "CAFA building",
+        "CAFA location"
+      ],
+      "responses": [
+        "The College of Architecture and Fine Arts (CAFA) is located on the 3rd floor of Federizo Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CAL location",
+      "patterns": [
+        "What building was CAL located?",
+        "Location of CAL",
+        "College of Arts and Letters main location",
+        "Where can i find the CAL?",
+        "Where can i locate the CAL?",
+        "College of Arts and Letters building",
+        "CAL location",
+        "CAL building"
+      ],
+      "responses": [
+        "The College of Arts and Letters (CAL) is located on the right ground floor and right side of the 2nd floor in Federizo Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CS building",
+      "patterns": [
+        "What building was CS located?",
+        "Location of CS",
+        "College of Science main location",
+        "Where can i find the CS?",
+        "Where can i locate the CS?",
+        "College of Science building",
+        "CS building",
+        "CS location"
+      ],
+      "responses": [
+        "The College of Science (CS) is located on the left ground floor and left side of the 2nd floor in Federizo Hall and it is behind BulSU Heroes Park."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "COE location",
+      "patterns": [
+        "What building was COE located?",
+        "Location of COE",
+        "College of Engineering main location",
+        "Where can i find the COE?",
+        "Where can i locate the COE?",
+        "College of Engineering building",
+        "COE building",
+        "COE location"
+      ],
+      "responses": [
+        "The College of Engineering (COE) building is located on the right side of BulSU Heroes Park. This building is named Natividad Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Location of CBA",
+      "patterns": [
+        "Location of CBA",
+        "College of Business Administration main location",
+        "Where can i find the CBA building?",
+        "Where can i locate the CBA?",
+        "College of Business Administration building",
+        "CBA location",
+        "CBA building"
+      ],
+      "responses": [
+        "The College of Business Administration (CBA) building is located on the left side of BulSU Heroes Park."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Location of CIT",
+      "patterns": [
+        "What building was CIT located?",
+        "Location of CIT",
+        "CIT main location",
+        "Where can i find the CIT?",
+        "Where can i locate the CIT?",
+        "CIT building",
+        "CIT location"
+      ],
+      "responses": [
+        "The College of Industrial Technology (CIT) is located after entering the main gate. This building is named Alvarado Hall."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CLaw location",
+      "patterns": [
+        "Location of College of Law",
+        "CLaw main location",
+        "Where can i find the College of Law?",
+        "Where can i locate the CLaw?",
+        "College of Law building",
+        "CLaw building",
+        "CLaw location"
+      ],
+      "responses": [
+        "The College of Law (CLaw) is located in front of Activity Center."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CN location",
+      "patterns": [
+        "What building was CN located?",
+        "Location of CN",
+        "College of Nursing location",
+        "Where can i find the CN?",
+        "Where can i locate the CN?",
+        "College of Nursing building",
+        "CN building",
+        "CN location"
+      ],
+      "responses": [
+        "The College of Nursing (CN) is located on the ground floor and the 2nd floor of Pimentel Hall beside of Activity Center."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "CICT location",
+      "patterns": [
+        "What building was CICT located?",
+        "Location of CICT",
+        "College of Information and Communication Technology main location",
+        "Where can i find the CICT?",
+        "Where can i locate the CICT?",
+        "CICT building",
+        "CICT location"
+      ],
+      "responses": [
+        "The College of Information and Communication Technology (CICT) is located on the 3rd floor and 4th floor of Pimentel Hall beside of Activity Center."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Main Address",
+      "patterns": [
+        "Bulsu Main Address?",
+        "BulSU address",
+        "Bulcan state university address",
+        "what is the address of bulsu main?",
+        "what is the address of bulsu?",
+        "what is the address of Bulacan state university?",
+        "where is the location of bulsu main?",
+        "where is the location of bulsu?",
+        "where is the location of Bulacan state university main?"
+      ],
+      "responses": [
+        "BulSU MAIN address is Guinhawa, City of Malolos, Bulacan",
+        "You can find us at Guinhawa, City of Malolos, Bulacan",
+        "Our Address is Guinhawa, City of Malolos, Bulacan"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Bustos Campus Address",
+      "patterns": [
+        "Bustos Campus Address?",
+        "BulSU bustos campus address",
+        "what is the address of Bustos Campus?",
+        "what is the address of BulSU Bustos Campus?",
+        "where is the location of Bustos Campus?",
+        "Location of Bustos Campus",
+        "Address of Bustos Campus"
+      ],
+      "responses": [
+        "BulSU Bustos Campus is located in town of Bustos Bulacan",
+        "You can find us at town of Bustos Bulacan",
+        "Our Address is town of Bustos Bulacan"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Meneses Campus Address",
+      "patterns": [
+        "Meneses Campus Address?",
+        "BulSU Meneses campus address",
+        "what is the address of Meneses Campus?",
+        "what is the address of BulSU Meneses Campus?",
+        "where is the location of Meneses Campus?",
+        "Location of Meneses Campus",
+        "Address of Meneses Campus"
+      ],
+      "responses": [
+        "BulSU Meneses Campus is located in town of Bulakan, Bulacan",
+        "You can find us at town of Bulakan,  Bulacan",
+        "Our Address is town of Bulakan, Bulacan"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Sarmiento Campus Address",
+      "patterns": [
+        "Sarmiento Campus Address?",
+        "BulSU Sarmiento campus address",
+        "what is the address of Sarmiento Campus?",
+        "what is the address of BulSU Sarmiento Campus?",
+        "where is the location of Sarmiento Campus?",
+        "Location of Sarmiento Campus",
+        "Address of Sarmiento Campus"
+      ],
+      "responses": [
+        "BulSU Sarmiento Campus is located in City of San Jose Del Monte, Bulacan",
+        "You can find us at City of San Jose Del Monte,  Bulacan",
+        "Our Address is City of San Jose Del Monte, Bulacan"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Hagonoy Campus Address",
+      "patterns": [
+        "Hagonoy Campus Address?",
+        "BulSU Hagonoy campus address",
+        "what is the address of Hagonoy Campus?",
+        "what is the address of BulSU Hagonoy Campus?",
+        "where is the location of Hagonoy Campus?",
+        "Location of Hagonoy Campus",
+        "Address of Hagonoy Campus"
+      ],
+      "responses": [
+        "BulSU Hagonoy Campus is located in province of Hagonoy, Bulacan",
+        "You can find us at province of Hagonoy,  Bulacan",
+        "Our Address is province of Hagonoy, Bulacan"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "BulSU History",
+      "patterns": [
+        "BulSU History",
+        "What is the history of Bulacan State University",
+        "History of Bulsu",
+        "Bulacan State University History",
+        "History of Bulacan State University"
+      ],
+      "responses": [
+        "The Bulacan State University started as an intermediate school in 1904 and has now progressed into one of the biggest educational institutions in Region III.To know more about BulSU visit https: //bulsu.edu.ph/about/"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Vision of BulSU",
+      "patterns": [
+        "What is the Vision of Bulacan State University?",
+        "What is the Vision of BulSU?",
+        "Vision of BulSU",
+        "Vision of Bulacan State University"
+      ],
+      "responses": [
+        "Bulacan State University is a progressive knowledge-generating institution globally recognized for excellent instruction, pioneering research, and responsive community engagements"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Mission of BulSU",
+      "patterns": [
+        "What is the Mission of Bulacan State University?",
+        "What is the Mission of BulSU?",
+        "Mission of BulSU",
+        "Mission of Bulacan State University"
+      ],
+      "responses": [
+        "Bulacan State University exists to produce highly competent, ethical and service-oriented professionals that contribute to the sustainable socio-economic growth and development of the nation."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Goal of BulSU",
+      "patterns": [
+        "What is the Goal of Bulacan State University?",
+        "What is the Goal of BulSU?",
+        "Goal of BulSU",
+        "Goal of Bulacan State University"
+      ],
+      "responses": [
+        "Provide Relevant Quality and Accessible Education, Innovative and Responsive Research and Public Engagement, BulSU in Regional Development, Sound Financial Management and Good Governance. To know more details about the Goals of BulSU visit https://bulsu.edu.ph/about/ "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "BulSU Contact",
+      "patterns": [
+        "University Contact",
+        "BulSU Contact",
+        "Bulacan State University Contact",
+        "What is the contact of BulSU?",
+        "What is the contact of Bulacan State University"
+      ],
+      "responses": [
+        "Hello! You can give us a call  919-7800 or send us an E-mail  officeofthepresident@bulsu.edu.ph",
+        "Good day! Our telephone number is 919-7800 and our E-mail is officeofthepresident@bulsu.edu.ph"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Quality Policy of BulSU",
+      "patterns": [
+        "What is the Quality Policy of Bulacan State University?",
+        "What is the Quality Policy of BulSU?",
+        "Quality Policy of BulSU",
+        "Quality Policy of Bulacan State University"
+      ],
+      "responses": [
+        "We at Bulacan State University (BulSU) are commiteed to provide excellent instruction, research and extension services.to know more about the Quality Policy of of BulSU visit https://bulsu.edu.ph/about/ "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "BulSU Announcement",
+      "patterns": [
+        "BulSU Announcement",
+        "Announcement",
+        "University Announcement",
+        "What are the Announcement in Bulacan State University?",
+        "What are the Announcement in BulSU?"
+      ],
+      "responses": [
+        "To know the Announcements visit https://bulsu.edu.ph/announcements/ "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "BulSU News",
+      "patterns": [
+        "BulSU News",
+        "News",
+        "University News",
+        "Bulacan State University News",
+        "News in Bulacan State University",
+        "News in BulSU"
+      ],
+      "responses": [
+        "To know the News visit https://bulsu.edu.ph/news/ "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Bids and awards",
+      "patterns": [
+        "Bids and awards",
+        "BulSU Bids and awards",
+        "what are the Birds and awards of BulSU?",
+        "what are the Birds and awards of Bulacan State University?",
+        "University Bids and awards"
+      ],
+      "responses": [
+        "To know the University Bids and Awards visit https://bulsu.edu.ph/bids-and-awards/"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Transparency Seal",
+      "patterns": [
+        "Transparency Seal",
+        "BulSU Transparency Seal",
+        "what are the Transparency Seal of BulSU?",
+        "what are the Transparency Seal of Bulacan State University?",
+        "University Transparency Seal"
+      ],
+      "responses": [
+        "The Transparency Seal, depicted by a pearl shining out of an open shell, is a symbol of a policy shift towards openness in access to government information. click the link to know more https://bulsu.edu.ph/transparency-seal/ "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Job Vacancies",
+      "patterns": [
+        "Is there any Job vancancies at BulSU?",
+        "Job Vacancies",
+        "Job Available at BulSU",
+        "BulSU Job Vacancies",
+        "Available Job Vacancies"
+      ],
+      "responses": [
+        "To know the available Job Vacancies click this link https://bulsu.edu.ph/job-vacancies/ "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in bulsu",
+      "database": "populations",
+      "patterns": [
+        "population of student in bulsu",
+        "how many student bulsu have?",
+        "Bulsu current student population",
+        "Bulsu current number of student population"
+      ],
+      "responses": [
+        "populations^bulsu"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CAFA",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CAFA",
+        "how many student CAFA have?",
+        "CAFA current student population",
+        "CAFA current number of student population"
+      ],
+      "responses": [
+        "populations^CAFA"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CAL",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CAL",
+        "how many student CAL have?",
+        "CAL current student population",
+        "CAL current number of student population"
+      ],
+      "responses": [
+        "populations^CAL"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CBA",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CBA",
+        "how many student CBA have?",
+        "CBA current student population",
+        "CBA current number of student population"
+      ],
+      "responses": [
+        "populations^CBA"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CCJE",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CCJE",
+        "how many student CCJE have?",
+        "CCJE current student population",
+        "CCJE current number of student population"
+      ],
+      "responses": [
+        "populations^CCJE"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CHTM",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CHTM",
+        "how many student CHTM have?",
+        "CHTM current student population",
+        "CHTM current number of student population"
+      ],
+      "responses": [
+        "populations^CHTM"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CICT",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CICT",
+        "how many student CICT have?",
+        "CICT current student population",
+        "CICT current number of student population"
+      ],
+      "responses": [
+        "populations^CICT"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CIT",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CIT",
+        "how many student CIT have?",
+        "CIT current student population",
+        "CIT current number of student population"
+      ],
+      "responses": [
+        "populations^CIT"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of Claw",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of Claw",
+        "how many student Claw have?",
+        "Claw current student population",
+        "Claw current number of student population"
+      ],
+      "responses": [
+        "populations^Claw"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CN",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CN",
+        "how many student CN have?",
+        "CN current student population",
+        "CN current number of student population"
+      ],
+      "responses": [
+        "populations^CN"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of COED",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of COED",
+        "how many student COED have?",
+        "COED current student population",
+        "COED current number of student population"
+      ],
+      "responses": [
+        "populations^COED"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CAFA",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CAFA",
+        "how many student CAFA have?",
+        "CAFA current student population",
+        "CAFA current number of student population"
+      ],
+      "responses": [
+        "populations^CAFA"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CS",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CS",
+        "how many student CS have?",
+        "CS current student population",
+        "CS current number of student population"
+      ],
+      "responses": [
+        "populations^CS"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of CSSP",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of CSSP",
+        "how many student CSSP have?",
+        "CSSP current student population",
+        "CSSP current number of student population"
+      ],
+      "responses": [
+        "populations^CSSP"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in Graduate school",
+      "database": "populations",
+      "patterns": [
+        "population of student in Graduate school",
+        "how many student Graduate school have?",
+        "Graduate school current student population",
+        "Graduate school current number of student population"
+      ],
+      "responses": [
+        "populations^Graduate school"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "population of student in college of COE",
+      "database": "populations",
+      "patterns": [
+        "population of student in college of COE",
+        "how many student CACOEFA have?",
+        "COE current student population",
+        "COE current number of student population"
+      ],
+      "responses": [
+        "populations^COE"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Irregular student",
+      "patterns": [
+        "What is Irregular student?",
+        "What is Irregular?"
+      ],
+      "responses": [
+        "A irregular student is one who registered for formal credits but who carries less than the full load  for a given semester to complete the requirements of the given curriculum."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "regular student",
+      "patterns": [
+        "What is regular student?",
+        "What is regular?",
+        "regular student"
+      ],
+      "responses": [
+        "A regular student is one who registers for formal academic credits and who carries the full load for a given semester and curriculum."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "shifter student",
+      "patterns": [
+        "What is shifter student?",
+        "What is shifter?",
+        "shifter student"
+      ],
+      "responses": [
+        "A shifter student is one who enrolls from one course to another within the same or another college/ campusof the University."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "transferee student",
+      "patterns": [
+        "What is transferee student?",
+        "What is transferee?",
+        "transferee student"
+      ],
+      "responses": [
+        "A transferstudent  is  one  who  had  come  from  another  recognized institution  of  higher  learning  and  officially  allowed  to  enroll  to  the same or another course in the University."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "working student",
+      "patterns": [
+        "What is working student?",
+        "working student"
+      ],
+      "responses": [
+        "A working student has part time job while studying. A working student may be allowed to enroll a minimum of fifteen (15) academic units in a given term or semester"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "foreign student",
+      "patterns": [
+        "What is foreign student?",
+        "foreign student"
+      ],
+      "responses": [
+        "A foreign student is one who is not a citizen of the Philippines."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "special student",
+      "patterns": [
+        "What is special student?"
+      ],
+      "responses": [
+        "A special student is one who is not earning credits for his academic work. Specialstudent may  enroll a maximum of nine (9) units per semester. He may enroll for a maximum two (2) academic  years.  The unit head concerned may recommend exemption to this limitation, subject to the approval by the Vice  President for Academic Affairs."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "classification of students",
+      "patterns": [
+        "What are classification of students?"
+      ],
+      "responses": [
+        "Students in the university are classfied as regular, irregular, shifter, transferee, working, foreign, and special student"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "requirements in admission",
+      "patterns": [
+        "What are requirements in admission?",
+        "bulsu ADMISSION REQUIREMENTS",
+        "University admission  requirements",
+        "what are requirements to be a student of bulsu",
+        "how to be student of bulsu",
+        "grade requirements in bulsu",
+        "APPLICATION REQUIREMENTS"
+      ],
+      "responses": [
+        "To know about application requirements and grade requirements in Admission please click <https://www.bulsu.edu.ph/admission/requirements.php>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "drop a subject",
+      "patterns": [
+        "How to drop a subject?",
+        "drop a subject?",
+        "can i drop a subject?",
+        "how can i drop a subject?"
+      ],
+      "responses": [
+        "Any student may officially drop his subject(s) until one (1) week before the midterm examinations as scheduled in the University calendar. The student must file the official dropping form at the Registrar‟s Office for this purpose."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how many absences before i got drop",
+      "patterns": [
+        "how many absences before i got drop?",
+        "number of absences to be consider as dropped",
+        "how many absences to get drop by prof?"
+      ],
+      "responses": [
+        "Any student who accumulates more than twenty percent (20%) of the time of unexcusedabsences from any  of his/her subject before the midterm examinations shall be dropped automatically from that  subject.  The instructor concerned shall mark him/her FDA (failure due absences) or UD (unofficially dropped) from his subject."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how many minutes before i got mark as late",
+      "patterns": [
+        "how many hours before i got mark as late?",
+        "how many minutes before i got mark as late?",
+        "rule to be mark as late?"
+      ],
+      "responses": [
+        "A student shall be marked tardy if he arrives in the class 15 minutes after the start of the scheduled time.."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how many hours before i got mark as absent",
+      "patterns": [
+        "how many hours before i got mark as absent?",
+        "how many minutes before i got mark as absent?",
+        "rule to be mark as absent?"
+      ],
+      "responses": [
+        "A student shall be marked absent from the class if he/shearrives 20 minutes after the start of the scheduled time. However, student must not be deprived of attending the lesson if he wishes."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how long should we wait for our proffessor",
+      "patterns": [
+        "how many hours should i wait for my professor before i leave?",
+        "how many minutes should i wait for my professor before i leave?",
+        "how long should we wait for our proffessor?"
+      ],
+      "responses": [
+        "Unless  the  subject  teacher  concerned  gave  prior  notice,  students  may leave their assigned room if the teacher fails to come within 15 minutes after the start of the scheduled time for a one-hour class, 30minutes for a  two-hour  class,  45  minutes  for  a  three-hour  class,  and  so  on.  The student  shall  be  marked  absent  if  he/she  leaves  their  assigned  room before the prescribed waiting time."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "grading system of bulsu",
+      "patterns": [
+        "what is the grading system of bulsu?",
+        "grading system of bulsu"
+      ],
+      "responses": [
+        "The academic performance of the student shall be rated using the following grading system: 1.00 (97–100%), 1.25 (94–96%), 1.50 (91–93%), 1.75 (88–90%), 2.00 (85–87%), 2.25 (82–84%), 2.50 (79–81%), 2.75 (76–78%), 3.00 (75%), 4.00 (Conditional Passed), 5.00 (Failed), INC (Incomplete), D (Officially Dropped), and AFD or UD (Failure Due to Absences or Unofficially Dropped)."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is 4 in grade",
+      "patterns": [
+        "What is 4 in grade?",
+        "What is 4.00 in grade?"
+      ],
+      "responses": [
+        "4.00(Conditional Passed) indicates that there is a slight deficiency in the performance of the student to  satisfy the minimum requirements the course for him to earn the lowest passing grade of 3. The student, in consultation with the subject teacher concerned, must resolve this deficiency within two (2) weeks after he/she  received the grade; otherwise the grade automatically becomes 5.00. The grade of 4.00 shall not appear in the student's permanent records or transcript of records"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is INC in grade?",
+      "patterns": [
+        "What is INC in grade?",
+        "INC",
+        "what is INC?"
+      ],
+      "responses": [
+        "Inc.(Incomplete) indicates that the student has been getting passing marks in all criteria for grading except that he lacks certain project or activity requiredin the course. The student hasa grace periodof one (1) year  to complete the requirements; otherwise, 'Inc.' automatically becomes '5.00'. If the student got the mark of 'Inc.' in a prerequisite subject, he may not enroll the subject in which it is a prerequisite until he has completed such prerequisite subject."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is D in grade",
+      "patterns": [
+        "What is D in grade?",
+        "D",
+        "what is D?"
+      ],
+      "responses": [
+        "D (Officially Dropped) indicates that the student officially filled a formal dropping form, duly signed by the  respective instructor/professor, dean and the university registrar."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is FDA or UD in grade",
+      "patterns": [
+        "What is FDA or UD in grade?",
+        "FDA or UD",
+        "what is FDA or UD?"
+      ],
+      "responses": [
+        "FDA or UD(Failure Due to Absences or Unofficially Dropped) indicates that the  student discontinue attending   the class without notice to th teacher concerned resulting to failure or unofficially dropped the subject."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is Gold gear awards",
+      "patterns": [
+        "What is Gold gear awards?",
+        "Gold gear awards"
+      ],
+      "responses": [
+        "The Gold Gear Awards is an annual recognitionprogramfor students for the formal awarding of academic  excellence, co-curricular and extra-curricular awards. The Office of the Dean for Student Affairs and Services in coordination with the different academic units of the University shall be responsible for the conduct of this program.."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is The Presidents List Award",
+      "patterns": [
+        "What is The President List Award?",
+        "What is The Presidents List Award?",
+        "President List Award",
+        "Presidents List Award"
+      ],
+      "responses": [
+        "The President's List Awardis given to students with a grade point average of 1.20-1.00 and no grade lower than 2.0 in any subject enrolled for the last two consecutive semesters prior to the award."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is The Deans List Award",
+      "patterns": [
+        "What is The Deans List Award?",
+        "What is The Dean List Award?",
+        "Deans List Award",
+        "Dean List Award"
+      ],
+      "responses": [
+        "The Dean's List Awardis given to students with a grade point average of 1.75-1.21 and no gradelower than 2.0 in any subject enrolled for the last two consecutive semesters prior to the award."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "candidates for the awards must have been",
+      "patterns": [
+        "how to be the Presidents List Award",
+        "how to be the President List Award",
+        "how get the Presidents List Award",
+        "how get the President List Award",
+        "who can be the Presidents List Award",
+        "who can be the President List Award",
+        "how to be the Deans List Award",
+        "how to be the Dean List Award",
+        "how get the Deans List Award",
+        "how get the Dean hList Award",
+        "who can be the Deans List Award",
+        "who can be the Dean List Award"
+      ],
+      "responses": [
+        "The candidates for the awards must have been officially enrolled with a minimum of 15 academic units or as prescribed in the regular curriculum in the last two consecutive semesters, i.e., 2nd semester of the preceding academic year and 1st semester of the current academic year. Only students from 2ndyear to senior year shall be entitled for these awards."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is Co-Curricular and Extra-Curricular Awards",
+      "patterns": [
+        "What is Co-Curricular and Extra-Curricular Awards",
+        "Co-Curricular and Extra-Curricular Awards"
+      ],
+      "responses": [
+        "To encourage excellence in co-curricular and extra-curricular activities,the University shall award  non-academic honors and recognition to deserving students based on approved criteria and standards set by Committee on Awards."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What Competitor winners will get",
+      "patterns": [
+        "What Competitor winners will get",
+        "What is Competitor winners",
+        "what if i win competition?"
+      ],
+      "responses": [
+        "Competition Winners. This award shall be limited to achievements in connection with duly accredited competitions in the academic, trade skills, cultural, arts and sports to which students officially represent the university or any of its  units. The awards shall be categorized in terms of degree or level of performance attained by the students in duly accredited competition. as follows \n a. International Level 1st to 5th place winners \n b.National Level 1st to 3rd place winners \n c.Regional Level 1st and 2nd place winners and \n d.Provincial or Division 1st place winners."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What is Extra-Curricular Awards",
+      "patterns": [
+        "What is Extra-Curricular Awards",
+        "what if i win competition?"
+      ],
+      "responses": [
+        "These special awards are given to students who made an exemplary achievements in their field of interest and  unconditionally shared to BulSU community. The candidates of these awards are nominated by the advisers of the  concerned organization and submitted to the dean of student affairs and service"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Extra-Curricular Awards list",
+      "patterns": [
+        "What are different types of Extra-Curricular Awards",
+        "Extra-Curricular Awards list"
+      ],
+      "responses": [
+        " a.Journalists of the Year \n b.Male and Female Athletes \n c.Male and Female Performing Artists \n d.Student Government Leaders \n e.Student Organizations Leaders \n\n Note:Acandidate for any of the award shall have no disciplinary record on the current academic year."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What are Graduation Requirements",
+      "patterns": [
+        "What are Graduation Requirements",
+        "Graduation Requirements in bulsu",
+        "how to graduate in bulsu",
+        "Graduation candidates",
+        "how to list in Graduation candidates"
+      ],
+      "responses": [
+        "1. Each student who has satisfied all the requirements of his/her course is required to apply for graduation  by filing the official Application for Graduation form to the office of the Registrar. \n 2. All candidates for  graduation must be cleared of all property and money accountabilities in the University before the commencement exercises. \n 3.No student shall graduate from this University unless he/she has completed at least one year of residence prior to the date of graduation. \n 4.All disciplinary charges against a student must be resolved and  sanctions completed before a student is eligible to graduate"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to be Summa Cum Laude",
+      "patterns": [
+        "What is Summa Cum Laude",
+        "How to be summa cum laude",
+        "Summa Cum Laude",
+        "Qualification to be Summa Cum Laude",
+        "Requirements to be Summa Cum Laude"
+      ],
+      "responses": [
+        "A Summa Cum Laude is the highest Academic honor that a student can achieve in the university. To be a Summa Cum laude a student must have grade point of average between 1.00 to 1.20 \n To qualify for honors, graduating  students must satisfy the following requirements: \n a. Earned at least a grade of 2.0 or its equivalent in all subjects; \n b. Completed at least seventy-five percent (75%) of the total number of academic units required for the course and residency of at least two years in the University; \n c. Enrolled at least fifteen (15) credit units prescribed in the curriculum in each of the terms or semesters. Exemption to this rule may be allowed if:(i) the required units prescribed in the curriculum in the given term/semester are less than this minimum requirement, (ii) the subject(s) needed to meet this minimum requirement are not offered. "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to be Magna Cum Laude",
+      "patterns": [
+        "What is Magna Cum Laude",
+        "How to be Magna cum laude",
+        "Magna Cum Laude",
+        "Qualification to be Magna Cum Laude",
+        "Requirements to be Magna Cum Laude"
+      ],
+      "responses": [
+        "A Magna Cum Laude is the second to the highest Academic honor that a student can achieve in the university. To be a Magna Cum laude a student must have grade point of average between 1.00 to 1.20 \n To qualify for honors, graduating  students must satisfy the following requirements: \n a. Earned at least a grade of 2.0 or its equivalent in all subjects; \n b. Completed at least seventy-five percent (75%) of the total number of academic units required for the course and residency of at least two years in the University; \n c. Enrolled at least fifteen (15) credit units prescribed in the curriculum in each of the terms or semesters. Exemption to this rule may be allowed if:(i) the required units prescribed in the curriculum in the given term/semester are less than this minimum requirement, (ii) the subject(s) needed to meet this minimum requirement are not offered. "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to be Cum Laude",
+      "patterns": [
+        "What is Cum Laude",
+        "How to be cum laude",
+        "Cum Laude",
+        "Qualification to be Cum Laude",
+        "Requirements to be Cum Laude"
+      ],
+      "responses": [
+        "A Cum Laude is the third to the highest Academic honor that a student can achieve in the university. To be a Cum laude a student must have grade point of average between 1.00 to 1.20 \n To qualify for honors, graduating  students must satisfy the following requirements: \n a. Earned at least a grade of 2.0 or its equivalent in all subjects; \n b. Completed at least seventy-five percent (75%) of the total number of academic units required for the course and residency of at least two years in the University; \n c. Enrolled at least fifteen (15) credit units prescribed in the curriculum in each of the terms or semesters. Exemption to this rule may be allowed if:(i) the required units prescribed in the curriculum in the given term/semester are less than this minimum requirement, (ii) the subject(s) needed to meet this minimum requirement are not offered. "
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to be Outstanding Student Awards",
+      "patterns": [
+        "What is Outstanding Student Awards",
+        "How to be Outstanding Student Awards",
+        "Outstanding Student Awards",
+        "Qualification to be Outstanding Student Awards",
+        "Requirements to be Outstanding Student Awards"
+      ],
+      "responses": [
+        "There shall be one student awardee per program for each college or campus subject to the following criteria: \n a. A grade point average of at least 1.75 with no grade lower than 2.0 in any subject; \n b. Shall have a minimum of 15 units enrolled during the semester or as prescribed in the regular curriculum; \n c. Winners in co-curricular and extra-curricular competitions,andd. Involvement in either university or college/campus based student"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to be Best in Specialization Awards",
+      "patterns": [
+        "What is Best in Specialization Awards",
+        "How to get Best in Specialization Awards",
+        "Best in Specialization Awards",
+        "Qualification to be Best in Specialization Awards",
+        "Requirements to be Best in Specialization Awards"
+      ],
+      "responses": [
+        "a. There shall be one student awardee per specializationb. The award shall be based on the performance in the specialization with no grade lowerthan 2.0 in all major subjectsor as the college selection committee may deem appropriate. \n c. Winner in specialized and/ or related competitions; \n d. The awardee shall be selected by  a  special committee designated for the purpose composed mainly of teachers in the major subjects and approved by the dean of the college/satellite campus."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to be University Leadership Award",
+      "patterns": [
+        "What is University Leadership Award",
+        "How to be University Leadership Award",
+        "University Leadership Award",
+        "Qualification to be University Leadership Award",
+        "Requirements to be University Leadership Award"
+      ],
+      "responses": [
+        "There shall be one University Leadership Award for the entire studentry. It is given only to a graduating  student either from student government, student organizations, cultural groups or student publications.To  qualify for this award, any graduating student/candidate shall submit a leadership folio to the Dean of Student  Affairs and Services, who,shall form a committee to evaluate the candidate‟s folio based on meritorious  leadership component and its impact to BulSU community."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Qualification to have Loyalty Award",
+      "patterns": [
+        "What is Loyalty Award",
+        "How to be Loyalty Award",
+        "Loyalty Award",
+        "Qualification to have Loyalty Award",
+        "Requirements to have Loyalty Award"
+      ],
+      "responses": [
+        "An honorary award is given to Student Regent upon expiration of his/her term.The Loyalty Award is given to  graduating student who started Grade 7 in BulSU and hadcompleted his/her baccalaureate degree in the same university."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how to get Transcript of Records",
+      "patterns": [
+        "how to get Transcript of Records",
+        "how to get Official Transcript of Records"
+      ],
+      "responses": [
+        "1. Any student who has settled all his financial obligations and accountabilities in the University may secure  copy of his official transcript of records, official certifications, credentials or other school records. \n 2.To secure the official transcript of records the student must file a clearance  form  together  with  official receipt of payment to the Registrar‟s office. \n 3.To effect a change in the nameon the records of female student  who got married while in the University, she must submit an affidavit of change of status and a copy of the marriage contract from the National Statistics Office to the Registrar‟s office. /n For easy and convenient procedure you can get and request a document here <https://request.bulsu.edu.ph/request>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "get documents bitch",
+      "patterns": [
+        "how to get COR",
+        "how to get COG",
+        "how to get TOR",
+        "how to get Academic Program Evaluation",
+        "how to get Background Investigation Certification",
+        "how to get Certificate as belong to the Upper 25% graduate",
+        "how to get Certificate as Bona fide Student ",
+        "how to get Certificate for Eligibility to Law School",
+        "how to get Certificate of Academic Requirements Completed",
+        "how to get Certificate of Candidate for Graduation",
+        "how to get Certificate of Enrolment ",
+        "how to get Certificate of Grades",
+        "how to get Certificate of Graduation",
+        "how to get Certificate of Official Grading System",
+        "how to get Certificate of Registration",
+        "how to get Certificate of Units Earned",
+        "how to get Certification, Authentication and Verification",
+        "how to get Certified True Copy - Certification ",
+        "how to get Certified True Copy - Diploma",
+        "how to get Certified True Copy - Registration Form (COR)",
+        "how to get Certified True Copy - TOR",
+        "how to get Course Description Certification",
+        "how to get Diploma",
+        "how to get English Proficiency Certification",
+        "how to get Form 137",
+        "how to get General Weighted Average Certificate",
+        "how to get Good Moral",
+        "how to get Graduate with Honor Certificate",
+        "how to get Honorable Dismissal Form / Transfer Credential",
+        "how to get Leave of Absence",
+        "how to get Report of Grades",
+        "how to get Supplemental Certificate",
+        "how to get Transcript of Records"
+      ],
+      "responses": [
+        "You can request any student record documents at BulSU Registar or you can request thru online here <https://request.bulsu.edu.ph/request>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Class cancelation",
+      "database": "calendar",
+      "patterns": [
+        "Do we have class today",
+        "Class cancelation",
+        "is class is cancel today",
+        "cancelation of classes today",
+        "is class is cancel"
+      ],
+      "responses": [
+        "calendar^cancel"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Do we have class Tomorrow",
+      "database": "calendar",
+      "patterns": [
+        "Do we have class Tomorrow",
+        "Class cancelation Tomorrow",
+        "is class is cancel Tomorrow",
+        "cancelation of classes Tomorrow"
+      ],
+      "responses": [
+        "calendar^cancel"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "is today is holiday?",
+      "database": "calendar",
+      "patterns": [
+        "is today is holiday?",
+        "today is holiday?",
+        "is holiday today?"
+      ],
+      "responses": [
+        "calendar^holiday"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "is tomorrow is holiday?",
+      "database": "calendar",
+      "patterns": [
+        "is tomorrow is holiday?",
+        "tomorrow is holiday?",
+        "is tomorrow today?"
+      ],
+      "responses": [
+        "calendar^holiday"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "When is Midterm?",
+      "database": "calendar",
+      "patterns": [
+        "When is Midterm?",
+        "When is Midterm examination?",
+        "Midterm examination date",
+        "Date of Midterm examination"
+      ],
+      "responses": [
+        "calendar^midterm"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "When is Finals?",
+      "database": "calendar",
+      "patterns": [
+        "When is Finals?",
+        "When is Finals examination?",
+        "Midterm Finals date",
+        "Date of Finals examination"
+      ],
+      "responses": [
+        "calendar^finals"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "When is Atbulsu Examination",
+      "database": "calendar",
+      "patterns": [
+        "When is Atbulsu Examination?",
+        "Atbulsu examination?",
+        "Atbulsu entrance examination?",
+        "Atbulsu entrance exam?",
+        "Atbulsu entrance date",
+        "Atbulsu date",
+        "Date of Atbulsu entrance exam",
+        "Date of entrance exam",
+        "entrance exam"
+      ],
+      "responses": [
+        "calendar^entrance_exam"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "When is start of the sem",
+      "database": "calendar",
+      "patterns": [
+        "When is start of the sem?",
+        "When is start of the semester?",
+        "When is semester will open?",
+        "when is the sem starts?",
+        "School sem starts",
+        "School semester starts",
+        "School sem Open",
+        "School semester Open"
+      ],
+      "responses": [
+        "calendar^sem_open"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "When is will the semester end",
+      "database": "calendar",
+      "patterns": [
+        "When is will the semester end?",
+        "When is will the sem end?",
+        "When is sem will end?",
+        "when is the semester ends?",
+        "School semester ends",
+        "School sem ends"
+      ],
+      "responses": [
+        "calendar^sem_end"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "unauthorized printed materials",
+      "patterns": [
+        "unauthorized printed materials on University campuses and premises?",
+        "what if i print unauthorized materials?",
+        "what if i print a book without permission?",
+        "what if i print a document without permission?"
+      ],
+      "responses": [
+        "Littering ordistribution of unauthorized printed materials on University campuses and premises \n 1st OffenseVerbal Reprimand, \n 2nd Offense Written reprimand with warning and 4 hours of Transformational Experience, and \n 3rd Offense 10 hours of Transformational Experience and Guidance Intervention Program."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Vandalism or unauthorized posting",
+      "patterns": [
+        "What are consequences of Vandalism?",
+        "What will happen if i draw on the wall?",
+        "What if i caught vandalism",
+        "What if i vandalis"
+      ],
+      "responses": [
+        "Vandalism or unauthorized posting of printed materials on University property, campuses and premises: \n 1st Offense Verbal Reprimand, Cleaning the walls, andCommitment letter. \n 2nd Offense Written reprimand with warning, Cleaning the walls, and 4 hours of Transformational Experience. lastly, \n 3rd Offense 10 hours of Transformational Experience, Cleaning the walls, and Guidance intervention program."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "what are consequences of Unauthorized solicitation of funds",
+      "patterns": [
+        "What are consequences of Unauthorized solicitation of funds?",
+        "What are consequences of selling of any ticket?",
+        "What will happen if i sell Unauthorized tickets?",
+        "What if i caught selling Unauthorized tickets"
+      ],
+      "responses": [
+        "1st OffenseVerbal Reprimandand Restitution, 2nd Offense Written reprimand with warning, 4 hours of Transformational Experience and Restitution, 3rd Offense 10 hours of Transformational Experience, Guidance intervention program and Restitution"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "What should i do during earthquake",
+      "patterns": [
+        "What should i do during earthquake",
+        "if there is an earthquake what shoul i do?",
+        "earthquake"
+      ],
+      "responses": [
+        "Stay calm.. and cover your head. If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table). Stay away from windows and outside doors. If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings. BulSU administrations advice during an earthquake to in Rizal park in Activity center because it is open and saftier"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Where is clinic of bulsu",
+      "patterns": [
+        "Where is clinic of bulsu",
+        "Where is the clinic",
+        "Where can i find the clinic"
+      ],
+      "responses": [
+        "clinic is located in i dont know"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "what bulsu clinic provide",
+      "patterns": [
+        "what bulsu clinic provide?",
+        "what do bulsu clinic provide?"
+      ],
+      "responses": [
+        "The clinic of BulSU provide services such as Medical and Dental consultation and treatment, Annual physical/medical and dental examination of college freshmen, transferees and shifters, Health promotion and disease prevention through health education, programs and orientation, 4. Provides first –aid management to trauma and  emergency cases and participates in disaster preparedness plan of the University, Issues medical/dental certificates according to the needs of the client, Provides emergency ambulance conduction of patients to appropriate medical facilities, Institutes environmental projects and programs, Monitors campus hygiene and sanitation, Prevents diseases through vaccination and information dissemination campaign and Keeps health records of students, faculty and non-academic personnel."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "sholarship in bulsu",
+      "patterns": [
+        "do bulsu offer scholarship?",
+        "sholarship in bulsu",
+        "how to be scholar in bulsu",
+        "Scholar update",
+        "requirements to be scholar in bulsu",
+        "scholarshipt program by bulsu",
+        "scholar",
+        "scholarship"
+      ],
+      "responses": [
+        "To know the updates and details in schoalrship program by BulSU you can Go here <https://www.bulsu.edu.ph/students/student-welfare-units.php?show=scholarship-and-financial-assistance>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where can i park my motor?",
+      "database": "random",
+      "patterns": [
+        "where can i park my motor?",
+        "where can i park my motorcycle?",
+        "parking for motorcycle?",
+        "how to park a motor in bulsu",
+        "how to park a motorcycle in bulsu",
+        "can i park motorcycle in bulsu",
+        "can i park motor in bulsu"
+      ],
+      "responses": [
+        "random^random1"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where can i park my car?",
+      "database": "random",
+      "patterns": [
+        "where can i park my car?",
+        "parking for car?",
+        "how to park a car in bulsu",
+        "can i park car in bulsu"
+      ],
+      "responses": [
+        "random^random2"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where can i park my bike?",
+      "database": "random",
+      "patterns": [
+        "where can i park my bike?",
+        "parking for bike?",
+        "how to park a bike in bulsu",
+        "can i park a bike in bulsu"
+      ],
+      "responses": [
+        "random^random3"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "missing bitch vehicle",
+      "database": "random",
+      "patterns": [
+        "i lost my car where can i report it?",
+        "i lost my bike where can i report it?",
+        "i lost my motor where can i report it?",
+        "i lost my motorcycle where can i report it?",
+        "my car is missing",
+        "my bike is missing",
+        "my motor is missing",
+        "my motorcycle is missing",
+        "where can i report missing vehicle",
+        "where can i report missing car",
+        "where can i report missing bike",
+        "where can i report missing motor",
+        "where can i report missing motorcycle"
+      ],
+      "responses": [
+        "random^random4"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "when is washday",
+      "patterns": [
+        "when is washday",
+        "when is wash-day",
+        "when is the washday",
+        "when is the wash-day",
+        "wash-day"
+      ],
+      "responses": [
+        "Every thursday a student of BulSU can wear civilian attire"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "when is org shirt day",
+      "patterns": [
+        "when is org shirt day",
+        "when is the org shirt day",
+        "org shirt day",
+        "when should i wear my org shirt",
+        "what if i dont have org shirt"
+      ],
+      "responses": [
+        "Every Friday a student is require to wear an Organizational shirts if a student do not have any org shirt they must wear a type A school uniform inside university"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "",
+      "patterns": [],
+      "responses": [],
+      "context_set": ""
+    },
+    {
+      "tag": "where can i buy org shirt?",
+      "patterns": [
+        "where can i buy org shirt?",
+        "where can i get a org shirt?"
+      ],
+      "responses": [
+        "I advice that you inquire to Organization that you want to buy the shirt. Most likely before you can buy a org shirt you must be member of their organization and you will ask to pay for membership fee for small amount"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where can i get p,e shirt?",
+      "patterns": [
+        "where can i get p,e shirt?",
+        "where can i buy p,e shirt?"
+      ],
+      "responses": [
+        "A p,e shirt can buy inside the university some of canteens are selling new p,e shirts but you can also buy outside university."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "can i use old p,e shirt",
+      "patterns": [
+        "can i use old p,e shirt",
+        "can i use old design of p,e shirt",
+        "using old p,e shirt is allow?"
+      ],
+      "responses": [
+        "Yes..!! you can use any P,E shirt as long as it have logo or name of BulSU."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Arts and Letters",
+      "patterns": [
+        "where is the faculty of College of Arts and Letters",
+        "where is the faculty of CAL",
+        "where can i find the faculty of College of Arts and Letters",
+        "where can i find the faculty of CAL",
+        "faculty of CAL",
+        "faculty of College of Arts and Letters "
+      ],
+      "responses": [
+        "Faculty of CAL is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of Laboratory High School",
+      "patterns": [
+        "where is the faculty of Laboratory High School",
+        "where is the faculty of Lab High",
+        "where can i find the faculty of Laboratory High School",
+        "where can i find the faculty of Lab High",
+        "faculty of Lab High",
+        "faculty of Laboratory High School"
+      ],
+      "responses": [
+        "Faculty of Lab High is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of Graduate School",
+      "patterns": [
+        "where is the faculty of Graduate School",
+        "where can i find the faculty of Graduate School",
+        "faculty of Graduate School"
+      ],
+      "responses": [
+        "Faculty of Graduate School is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Information & Communications Technology",
+      "patterns": [
+        "where is the faculty of College of Information & Communications Technology",
+        "where is the faculty of CICT",
+        "where can i find the faculty of College of Information & Communications Technology",
+        "where can i find the faculty of CICT",
+        "faculty of CICT",
+        "faculty of College of Information & Communications Technology"
+      ],
+      "responses": [
+        "Faculty of CICT is located in 3rd floor of pimentel hall"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Engineering",
+      "patterns": [
+        "where is the faculty of College of Engineering",
+        "where is the faculty of COE",
+        "where can i find the faculty of College of Engineering",
+        "where can i find the faculty of COE",
+        "faculty of COE",
+        "faculty of College of Engineering"
+      ],
+      "responses": [
+        "Faculty of COE is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Criminal Justice Education",
+      "patterns": [
+        "where is the faculty of College of Criminal Justice Education",
+        "where is the faculty of CCJE",
+        "where can i find the faculty of College of Criminal Justice Education",
+        "where can i find the faculty of CCJE",
+        "faculty of CCJE",
+        "faculty of College of Criminal Justice Education"
+      ],
+      "responses": [
+        "Faculty of CCJE is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Education",
+      "patterns": [
+        "where is the faculty of College of Education",
+        "where is the faculty of COED",
+        "where can i find the faculty of College of Education",
+        "where can i find the faculty of COED",
+        "faculty of COED",
+        "faculty of College of Education "
+      ],
+      "responses": [
+        "Faculty of COED is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Architecture & Fine Arts",
+      "patterns": [
+        "where is the faculty of College of Architecture & Fine Arts",
+        "where is the faculty of CAFA",
+        "where can i find the faculty of College of Architecture & Fine Arts",
+        "where can i find the faculty of CAFA",
+        "faculty of CAFA",
+        "faculty of College of Architecture & Fine Arts"
+      ],
+      "responses": [
+        "Faculty of CAFA is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Hospitality and Tourism Management",
+      "patterns": [
+        "where is the faculty of College of Hospitality and Tourism Management",
+        "where is the faculty of CHTM",
+        "where can i find the faculty of College of Hospitality and Tourism Management",
+        "where can i find the faculty of CHTM",
+        "faculty of CHTM",
+        "faculty of College of Hospitality and Tourism Management"
+      ],
+      "responses": [
+        "Faculty of CHTM is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Sports, Exercise, and Recreation",
+      "patterns": [
+        "where is the faculty of College of Sports, Exercise, and Recreation",
+        "where is the faculty of CSER",
+        "where can i find the faculty of College of Sports, Exercise, and Recreation",
+        "where can i find the faculty of CSER",
+        "faculty of CSER",
+        "faculty of College of Sports, Exercise, and Recreation"
+      ],
+      "responses": [
+        "Faculty of CSER is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Arts and Letters",
+      "patterns": [
+        "where is the faculty of College of Arts and Letters",
+        "where is the faculty of CAL",
+        "where can i find the faculty of College of Arts and Letters",
+        "where can i find the faculty of CAL",
+        "faculty of CAL",
+        "faculty of College of Arts and Letters"
+      ],
+      "responses": [
+        "Faculty of CAL is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Business Administration",
+      "patterns": [
+        "where is the faculty of College of Business Administration",
+        "where is the faculty of CBA",
+        "where can i find the faculty of College of Business Administration",
+        "where can i find the faculty of CBA",
+        "faculty of CBA",
+        "faculty of College of Business Administration"
+      ],
+      "responses": [
+        "Faculty of CBA is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Science",
+      "patterns": [
+        "where is the faculty of College of Science",
+        "where is the faculty of CS",
+        "where can i find the faculty of College of Science",
+        "where can i find the faculty of CS",
+        "faculty of CS",
+        "faculty of College of Science"
+      ],
+      "responses": [
+        "Faculty of CS is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Nursing",
+      "patterns": [
+        "where is the faculty of College of Nursing",
+        "where is the faculty of CN",
+        "where can i find the College of Nursing",
+        "where can i find the faculty of CN",
+        "faculty of CN",
+        "faculty of College of Nursing"
+      ],
+      "responses": [
+        "Faculty of CN is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Social Sciences and Philosophy",
+      "patterns": [
+        "where is the faculty of College of Social Sciences and Philosophy",
+        "where is the faculty of CSSP",
+        "where can i find the faculty of College of Social Sciences and Philosophy",
+        "where can i find the faculty of CSSP",
+        "faculty of CSSP",
+        "faculty of College of Social Sciences and Philosophy"
+      ],
+      "responses": [
+        "Faculty of CSSP is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Industrial Technology",
+      "patterns": [
+        "where is the faculty of College of Industrial Technology",
+        "where is the faculty of CIT",
+        "where can i find the faculty of College of Industrial Technology",
+        "where can i find the faculty of CIT",
+        "faculty of CIT",
+        "faculty of College of Industrial Technology"
+      ],
+      "responses": [
+        "Faculty of CIT is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "where is the faculty of College of Law",
+      "patterns": [
+        "where is the faculty of College of Law",
+        "where is the faculty of Claw",
+        "where can i find the faculty of College of Law",
+        "where can i find the faculty of Claw",
+        "faculty of Claw",
+        "faculty of College of Law"
+      ],
+      "responses": [
+        "Faculty of Claw is located in idk"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "how to enroll in bulsu",
+      "patterns": [
+        "how to enroll in bulsu",
+        "Enrolment Procedure",
+        "Enrolment Procedure For old students",
+        "Enrolment Procedure For New students"
+      ],
+      "responses": [
+        "About enrollment updates, instruction and process you can visit <https://www.bulsu.edu.ph/enrolment-procedure/>"
       ],
       "context_set": ""
     }

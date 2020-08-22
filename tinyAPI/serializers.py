@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Course
+from .models import Course, Executive, Dean, Population, Random
 
 # class TinyResponseSerializer(serializers.ModelSerializer):
 #     class Meta:
@@ -18,6 +18,31 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = '__all__'
+
+
+class ExecutiveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Executive
+        fields = '__all__'
+
+
+class DeanSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dean
+        fields = '__all__'
+
+
+class PopulationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Population
+        fields = '__all__'
+
+
+class RandomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Random
+        fields = '__all__'
+
 
 
 # class CourseByCollegeSerializer(serializers.Serializer):

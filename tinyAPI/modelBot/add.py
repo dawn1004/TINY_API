@@ -11,23 +11,23 @@
 # import os
 
 # try:
-#     os.remove("tinyAPI/modelBot/data.pickle")
+#     os.remove("data.pickle")
 # except:
 #     pass
 # try:
-#     os.remove("tinyAPI/modelBot/model.tflearn.data-00000-of-00001")
+#     os.remove("model.tflearn.data-00000-of-00001")
 # except:
 #     pass
 # try:
-#     os.remove("tinyAPI/modelBot/model.tflearn.index")
+#     os.remove("model.tflearn.index")
 # except:
 #     pass
 # try:
-#     os.remove("tinyAPI/modelBot/model.tflearn.meta")
+#     os.remove("model.tflearn.meta")
 # except:
 #     pass
 # try:
-#     os.remove("tinyAPI/modelBot/checkpoint")
+#     os.remove("checkpoint")
 # except:
 #     pass
 
@@ -36,9 +36,8 @@
 # stemmer = LancasterStemmer()
 
 
-# with open("tinyAPI/modelBot/intents.json") as file:
+# with open("intents.json") as file:
 #     data = json.load(file)
-
 
 # words = []
 # labels = []
@@ -100,25 +99,25 @@
 # model.save("model.tflearn")
 
 
-from nltk.stem.lancaster import LancasterStemmer
-import nltk
-import numpy
-import tflearn
-import tensorflow
-import random
-import json
-import pickle
 # second step
 
 
+import pickle
+import json
+import random
+import tensorflow
+import tflearn
+import numpy
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
 
-with open("tinyAPI/modelBot/intents.json") as file:
+with open("intents.json") as file:
     data = json.load(file)
 
 try:
-    with open("tinyAPI/modelBot/data.pickle", "rb") as f:
+    with open("data.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
 except:
     words = []
@@ -166,7 +165,7 @@ except:
     training = numpy.array(training)
     output = numpy.array(output)
 
-    with open("tinyAPI/modelBot/data.pickle", "wb") as f:
+    with open("data.pickle", "wb") as f:
         pickle.dump((words, labels, training, output), f)
 
 tensorflow.reset_default_graph()
@@ -180,10 +179,10 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 try:
-    model.load("tinyAPI/modelBot/model.tflearn")
+    model.load("model.tflearn")
 except:
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("tinyAPI/modelBot/model.tflearn")
+    model.save("model.tflearn")
 
 
 def bag_of_words(s, words):
