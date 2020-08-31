@@ -24,7 +24,8 @@ urlpatterns = [
     path('populations/<id>/<student_population>/', views.updatePopulation),
     path('randoms/', views.getRandom),
     path('randoms/<id>/<answer>/', views.updateRandom),
-
+    path('updateUsername/<oldusername>/<newusername>/<password>/', views.updateUsername),
+    path('updatePassword/<username>/<password>/<newpassword>/', views.updatePassword)
 
 ]
 # username, password, name, intent

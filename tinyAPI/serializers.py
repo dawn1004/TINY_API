@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Course, Executive, Dean, Population, Random
+from django.contrib.auth.models import User
 
 # class TinyResponseSerializer(serializers.ModelSerializer):
 #     class Meta:
@@ -43,7 +44,10 @@ class RandomSerializer(serializers.ModelSerializer):
         model = Random
         fields = '__all__'
 
-
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
 
 # class CourseByCollegeSerializer(serializers.Serializer):
 #     response = serializers.CharField(max_length=500)

@@ -11,7 +11,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
-from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer
+from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer, UserSerializer
 # from rest_framework import viewsets
 
 from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random
@@ -221,15 +221,52 @@ def createUser(request, username, password, email, firstname, lastname, intent):
     # http://127.0.0.1:8000/tinyAPI/createUser/dawn11232123/124553/dawnhae/school related/
 
 
-@api_view(['GET', ])
+####################################Admin routes#################################################
+#admin login
+@api_view(['POST', ])
+@permission_classes((IsAuthenticated,))
 def adminLogin(request, username, password):
     admin = authenticate(request, username=username, password=password)
     if admin is not None:
         if admin.is_staff:
             return Response({'result': 'found', 'username': username, 'password': password})
 
-    return Response({'result': 'not found'})
+    return Response({'MESSAGE': 'Invallid Credential'}, status=status.HTTP_404_NOT_FOUND)
     # http://127.0.0.1:8000/tinyAPI/adminLogin/kishinki/dawn123741/
+
+
+#edit username
+@api_view(['POST',])
+@permission_classes((IsAuthenticated,))
+def updateUsername(request, oldusername, newusername, password):
+    admin = authenticate(request, username=oldusername, password=password)
+    if admin is not None:
+        if admin.is_staff:
+            User.objects.filter(is_staff= True).update(username=newusername)
+            updatedadmin = User.objects.get(is_staff=True)
+            return Response({'id': updatedadmin.id, 'new_username': updatedadmin.username})
+
+    return Response({'result': 'not found'})   
+
+
+#edit password
+@api_view(['POST',])
+@permission_classes((IsAuthenticated,))
+def updatePassword(request, username, password, newpassword):
+    admin = authenticate(request, username=username, password=password)
+    if admin is not None:
+        if admin.is_staff:
+            user = User.objects.get(is_staff= True)
+            user.set_password(newpassword)
+            user.save()
+            updatedadmin = User.objects.get(is_staff=True)
+            return Response({'id': updatedadmin.id,  'new_password': updatedadmin.password})
+
+    # u = User.objects.get(is_staff= True)
+    # u.set_password('dawn12374')
+    # u.save()
+    return Response({'result': 'not found'})
+
 
 
 ####################################End points#################################################
@@ -238,7 +275,7 @@ def adminLogin(request, username, password):
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
 def getExecutives(request):
-    executive = Executive.objects.all()
+    executive = Executive.objects.all().order_by('id')
 
     serializer = ExecutiveSerializer(executive, many=True)
     return Response(serializer.data)
@@ -259,7 +296,7 @@ def updateExecutive(request, id, name):
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
 def getDean(request):
-    dean = Dean.objects.all()
+    dean = Dean.objects.all().order_by('id')
 
     serializer = DeanSerializer(dean, many=True)
     return Response(serializer.data)
@@ -280,7 +317,7 @@ def updateDean(request, id, name):
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
 def getPopulation(request):
-    population = Population.objects.all()
+    population = Population.objects.all().order_by('id')
 
     serializer = PopulationSerializer(population, many=True)
     return Response(serializer.data)
@@ -302,7 +339,7 @@ def updatePopulation(request, id, student_population):
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
 def getRandom(request):
-    random = Random.objects.all()
+    random = Random.objects.all().order_by('id')
 
     serializer = RandomSerializer(random, many=True)
     return Response(serializer.data)
