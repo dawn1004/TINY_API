@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from datetime import date
+# from datetime import time
 
 
 class Question(models.Model):
@@ -18,6 +19,8 @@ class Calendar(models.Model):
     date_end = models.DateField(default=date.today)
     event = models.CharField(max_length=1000, default="")
     remark = models.CharField(max_length=500)
+    name= models.CharField(max_length=500, default="No event name")
+    color= models.CharField(max_length=100, default= "#004980")
 
 
 class Course(models.Model):
@@ -55,4 +58,11 @@ class Population(models.Model):
 
 class Random(models.Model):
     key = models.CharField(max_length=500)
-    answer = models.CharField(max_length=500)
+    question = models.CharField(max_length=2000, default="")
+    answer = models.CharField(max_length=2000)
+
+
+class Action(models.Model):
+    action = models.CharField(max_length=150)
+    date = models.DateField(default=date.today)
+    time = models.TimeField(auto_now_add=True)

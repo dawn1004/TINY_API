@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random
+from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -7,7 +7,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 class CalendarAdmin(admin.ModelAdmin):
-    list_display = ('date_start', 'date_end', 'event', 'remark')
+    list_display = ('date_start', 'date_end', 'event', 'remark', 'name', 'color')
 
 
 class userIntentAdmin(admin.ModelAdmin):
@@ -31,7 +31,10 @@ class PopulationAdmin(admin.ModelAdmin):
 
 
 class RandomAdmin(admin.ModelAdmin):
-    list_display = ('key', 'answer')
+    list_display = ('key', 'answer', 'question')
+
+class ActionAdmin(admin.ModelAdmin):
+    list_display = ('action', 'date', 'time')
 
 
 admin.site.register(Question, QuestionAdmin)
@@ -43,3 +46,4 @@ admin.site.register(Executive, ExecutiveAdmin)
 admin.site.register(Dean, DeanAdmin)
 admin.site.register(Population, PopulationAdmin)
 admin.site.register(Random, RandomAdmin)
+admin.site.register(Action, ActionAdmin)

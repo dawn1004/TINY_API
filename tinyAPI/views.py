@@ -11,14 +11,14 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
-from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer, UserSerializer
+from rest_framework.authtoken.models import Token
+from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer, UserSerializer, ActionSerializer, CalendarSerializer, AuthTokenSerializer
 # from rest_framework import viewsets
 
-from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random
+from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
-
 
 def index(request):
     inp = 'hi'
@@ -28,7 +28,7 @@ def index(request):
     results_index = numpy.argmax(results)
     tag = modelo.labels[results_index]
 
-    if results[results_index] > 0.7:
+    if results[results_index] > 0.95:
         for tg in modelo.data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
@@ -46,19 +46,19 @@ def findInDatabase(response, userInput):
 
     if response[0] == 'executives':
         try:
-            return Executive.objects.get(position=response[1]).name
+            return Executive.objects.filter(position__iexact=response[1])[0].name
         except:
             print("something is wrong")
 
     elif response[0] == 'deans':
         try:
-            return Dean.objects.get(college=response[1]).name
+            return Dean.objects.filter(college__iexact=response[1])[0].name
         except:
             print("something is wrong")
 
     elif response[0] == 'populations':
         try:
-            return Population.objects.get(college=response[1]).student_population
+            return Population.objects.filter(college__iexact=response[1])[0].student_population
         except:
             print("something is wrong")
 
@@ -80,14 +80,13 @@ def findCalendar(target, userInput):
 
     if target == 'cancel' or target == 'holiday':
         try:
-            cals = Calendar.objects.filter(
-                Q(event='cancel') | Q(event='holiday'))
+            cals = Calendar.objects.filter(event=target)
 
             for cal in cals:
                 if cal.date_start <= use_date and cal.date_end >= use_date:
                     return cal.remark
         except:
-            print("something is wrong")
+            return "theres no yet announcement from BulSU administration"
 
     if (target == 'midterm' or target == 'finals'
             or target == 'entrance_exam' or target == 'sem_open' or target == 'sem_end'):
@@ -96,25 +95,34 @@ def findCalendar(target, userInput):
             cals = Calendar.objects.filter(event=target)
 
             for cal in cals:
-                if cal.date_start.year == today.year:
+                if cal.date_start.year == today.year and cal.date_start > today:
+                    print(cal.remark)
                     return cal.remark
         except:
-            print("something is wrong")
+            return "theres no yet announcement from BulSU administration"
 
     return 'No update yet...'
 
 
-@api_view(['GET', ])
+def addAction(transaction):
+    new_action = Action.objects.create(
+        action=transaction
+    )
+    new_action.save()
+
+
+@api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
-def sendQuery(request, query):
-    inp = query
+def sendQuery(request):
+    inp = request.data['message']
     asnw = "blank"
 
     results = modelo.model.predict([modelo.bag_of_words(inp, modelo.words)])[0]
     results_index = numpy.argmax(results)
     tag = modelo.labels[results_index]
-
-    if results[results_index] > 0.7:
+    ##adjust 
+    # print("see level: "+results[results_index])
+    if results[results_index] > 0.97:
         for tg in modelo.data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
@@ -124,7 +132,7 @@ def sendQuery(request, query):
         asnw = "i hvae no response for that"
     tiny_response = {'response': asnw}
 
-    if request.method == 'GET':
+    if request.method == 'POST':
 
         # find if the query is in Question model
         if '^' in tiny_response['response']:
@@ -212,13 +220,38 @@ def createUser(request, username, password, email, firstname, lastname, intent):
             intent = userIntent(intent=intent, user=user)
 
             intent.save()
+            
+            token = Token.objects.get(user=user)
+            return Response({
+                "token": token.key,
+                'user': token.user.username,
+                'message': "created success"
+                })
         except:
             return Response({'error': 'Username is already taken'})
+        
 
-        intent.save()
+    
+    # http://127.0.0.1:8000/tinyAPI/createUser/dawn12/124553/dawnhae.gmail.com/dawn/bugay/school related/
 
-    return Response({'message': "created success"})
-    # http://127.0.0.1:8000/tinyAPI/createUser/dawn11232123/124553/dawnhae/school related/
+@api_view(['GET',])
+@permission_classes((IsAuthenticated,))
+def getTokenUsers(request):
+
+    token = Token.objects.all()
+
+    serializer = AuthTokenSerializer(token, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def getUsers(request):
+    users = User.objects.all()
+
+    serializer = UserSerializer(users, many=True)
+    return Response(serializer.data)
+
+
 
 
 ####################################Admin routes#################################################
@@ -244,6 +277,7 @@ def updateUsername(request, oldusername, newusername, password):
         if admin.is_staff:
             User.objects.filter(is_staff= True).update(username=newusername)
             updatedadmin = User.objects.get(is_staff=True)
+            addAction("Updated username")
             return Response({'id': updatedadmin.id, 'new_username': updatedadmin.username})
 
     return Response({'result': 'not found'})   
@@ -260,12 +294,20 @@ def updatePassword(request, username, password, newpassword):
             user.set_password(newpassword)
             user.save()
             updatedadmin = User.objects.get(is_staff=True)
+            addAction("Updated password")
             return Response({'id': updatedadmin.id,  'new_password': updatedadmin.password})
 
     # u = User.objects.get(is_staff= True)
     # u.set_password('dawn12374')
     # u.save()
     return Response({'result': 'not found'})
+
+@api_view(['GET',])
+@permission_classes((IsAuthenticated,))
+def getActions(request):
+    actions = Action.objects.all().order_by('-id')
+    serializer = ActionSerializer(actions, many=True)
+    return Response(serializer.data)
 
 
 
@@ -347,12 +389,102 @@ def getRandom(request):
 
 @api_view(['PATCH', ])
 @permission_classes((IsAuthenticated,))
-def updateRandom(request, id, answer):
+def updateRandom(request, id):
     try:
+        answer = request.data['answer']
         Random.objects.filter(id=id).update(
             answer=answer)
         random = Random.objects.get(id=id)
 
-        return Response({'id': random.id, 'key': random.key, 'answer': random.answer})
+        return Response({'id': random.id, 'key': random.key, 'answer': random.answer, 'question': random.question})
     except:
         return Response({'MESSAGE': 'ID NOT FOUND'}, status=status.HTTP_404_NOT_FOUND)
+
+
+######################calendar routes#################
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def getAllCalendar(request):
+    calendar = Calendar.objects.all().order_by("-id")
+
+    serializer = CalendarSerializer(calendar, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def getAllHolidays(request):
+    holidays = Calendar.objects.filter(event="holiday")
+    data=[]
+    for holiday in holidays:
+        data.append({
+            "date_start": holiday.date_start,
+            "date_end": holiday.date_end,
+            "event": holiday.event,
+            "remark": holiday.remark,
+            "name": holiday.name
+            }
+        )
+    print(data)
+
+    return Response(data)
+
+@api_view(['POST', ])
+@permission_classes((IsAuthenticated,))
+def addCalendarEvent(request, event, date_start, date_end, remark, name, color):
+    try:
+        new_event = Calendar.objects.create(
+            event=event,
+            date_start= date_start,
+            date_end= date_end,
+            remark=remark,
+            name= name,
+            color=color
+            )
+        calendar = Calendar.objects.all().order_by("-id")
+
+        serializer = CalendarSerializer(calendar, many=True)
+        return Response(serializer.data)
+    except:
+        return Response({'MESSAGE': 'unsuccess'}, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['PATCH', ])
+@permission_classes((IsAuthenticated,))
+def updateCalendarEvent(request, id, remark):
+    try:
+        Calendar.objects.filter(id=id).update(
+            remark=remark
+             )
+        calendar = Calendar.objects.get(id=id)
+
+        return Response({'id': calendar.id, 
+        'remark': calendar.remark, 
+        'event': calendar.event,
+        'date_start': calendar.date_start,
+        'date_end': calendar.date_end,
+        "name": calendar.name,
+        "color": calendar.color
+        })
+    except:
+        return Response({'MESSAGE': 'unsuccess'}, status=status.HTTP_404_NOT_FOUND)
+
+#create delete calendar event
+
+@api_view(['DELETE',])
+@permission_classes((IsAuthenticated,))
+def deleteCalendarEvent(request, id):
+    try:
+        event = Calendar.objects.get(id=id)
+        event.delete()
+        return Response({'MESSAGE': 'SUCCESSFULLLY DELETED'})
+    except:
+        return Response({'MESSAGE': 'unseccess'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
+
+#################################auth#################################
+
+# @api_view(['GET',])
+# @permission_classes((IsAuthenticated,))
+# def getAllToken
