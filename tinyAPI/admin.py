@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action
+from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action, ChatbotSettings, Contact
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -37,6 +37,13 @@ class ActionAdmin(admin.ModelAdmin):
     list_display = ('action', 'date', 'time')
 
 
+class ChatbotSettingsAdmin(admin.ModelAdmin):
+    list_display = ('key', 'message', 'is_disable')
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ("id", "office_name", "email", "facebook", "landline", "college_secretary", "ref")
+
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Calendar, CalendarAdmin)
 admin.site.register(userIntent, userIntentAdmin)
@@ -47,3 +54,5 @@ admin.site.register(Dean, DeanAdmin)
 admin.site.register(Population, PopulationAdmin)
 admin.site.register(Random, RandomAdmin)
 admin.site.register(Action, ActionAdmin)
+admin.site.register(ChatbotSettings, ChatbotSettingsAdmin)
+admin.site.register(Contact, ContactAdmin)

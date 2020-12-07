@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinyAPI.apps.TinyapiConfig',
+    "rest_framework_recaptcha",
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
 ]
+
+DRF_RECAPTCHA_SECRET_KEY = "6LcXeuQZAAAAALMTiYYz0oHUk-FGbV4EMcvYYmXf"
+
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [

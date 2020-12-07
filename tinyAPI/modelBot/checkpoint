@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\kishinki\\Desktop\\py_capstone\\tiny-api\\tinyAPI\\modelBot\\model.tflearn"
-all_model_checkpoint_paths: "C:\\Users\\kishinki\\Desktop\\py_capstone\\tiny-api\\tinyAPI\\modelBot\\model.tflearn"
+model_checkpoint_path: "C:\\Users\\Riocel\\Desktop\\web development\\python\\django\\TINY_API\\tinyAPI\\modelBot\\model.tflearn"
+all_model_checkpoint_paths: "C:\\Users\\Riocel\\Desktop\\web development\\python\\django\\TINY_API\\tinyAPI\\modelBot\\model.tflearn"

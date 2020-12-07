@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import numpy
 import random
 import datetime
-
+import uuid
 
 from .modelBot import model as modelo
 
@@ -12,10 +12,10 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
-from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer, UserSerializer, ActionSerializer, CalendarSerializer, AuthTokenSerializer
+from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer, UserSerializer, ActionSerializer, CalendarSerializer, AuthTokenSerializer, ChatbotSettingsSerializer, MySerializer, ContactSerializer
 # from rest_framework import viewsets
 
-from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action
+from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action, ChatbotSettings, Contact
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
@@ -40,25 +40,41 @@ def index(request):
     return HttpResponse(asnw)
 
 
+def my_random_string(string_length=10):
+    random = str(uuid.uuid4()) 
+    random = random.upper() 
+    random = random.replace("-","") 
+    return random[0:string_length] 
+
+
 def findInDatabase(response, userInput):
     response = response.split("^")
     print("workiiiiiiiiiiiiiiing")
 
     if response[0] == 'executives':
         try:
-            return Executive.objects.filter(position__iexact=response[1])[0].name
+            result = Executive.objects.filter(position__iexact=response[1])[0]
+            name = result.name
+            position = result.position
+            return "The BulSU {} is {}".format(position, name)
         except:
             print("something is wrong")
 
     elif response[0] == 'deans':
         try:
-            return Dean.objects.filter(college__iexact=response[1])[0].name
+            result = Dean.objects.filter(college__iexact=response[1])[0]
+            name = result.name
+            college = result.college
+            return "The dean of {} is {}".format(college, name)
         except:
             print("something is wrong")
 
     elif response[0] == 'populations':
         try:
-            return Population.objects.filter(college__iexact=response[1])[0].student_population
+            result = Population.objects.filter(college__iexact=response[1])[0]
+            student_population = result.student_population
+            college = result.college
+            return "The population of the student in {} is {} students".format(college, student_population)
         except:
             print("something is wrong")
 
@@ -70,6 +86,32 @@ def findInDatabase(response, userInput):
 
     elif response[0] == 'calendar':
         return findCalendar(response[1], userInput)
+
+    elif response[0] == 'Contacts':
+        try:
+            result = Contact.objects.filter(ref__iexact=response[1])[0]
+            
+            office_name = result.office_name
+            email = result.email
+            facebook = result.facebook
+            landline = result.landline
+            college_secretary = result.college_secretary
+
+            res = "You can contact {} via: <br/><br/>".format(office_name)
+            if email !="":
+                res+="Email: {} <br/>".format(email)
+            if facebook !="":
+                res+="Facebook: {} <br/>".format(facebook)
+            if landline != "":
+                res+="Deans Office Tel#: {} <br/>".format(landline)
+            if college_secretary !="":
+                res+="College Secretary Tel#: {}".format(college_secretary)
+            
+            return res
+        except:
+            print("something is wrong")
+
+
 
 
 def findCalendar(target, userInput):
@@ -85,23 +127,38 @@ def findCalendar(target, userInput):
             for cal in cals:
                 if cal.date_start <= use_date and cal.date_end >= use_date:
                     return cal.remark
+            #if holiday tommorow asking if cancelled
+            if target == 'cancel' and (use_date == tomorrow or use_date == today):
+                cals = Calendar.objects.filter(event='holiday')
+
+                for cal in cals:
+                    if cal.date_start <= use_date and cal.date_end >= use_date:
+                        return cal.remark
+
+
+
+
         except:
-            return "theres no yet announcement from BulSU administration"
+            return "There is no yet announcement from the BulSU administration."
 
     if (target == 'midterm' or target == 'finals'
             or target == 'entrance_exam' or target == 'sem_open' or target == 'sem_end'):
         try:
             # .date_start.year
             cals = Calendar.objects.filter(event=target)
-
+            temp=""
             for cal in cals:
-                if cal.date_start.year == today.year and cal.date_start > today:
+                if cal.date_start.year == today.year and cal.date_end >= today:
+                    if temp == "":
+                        temp = cal
+                    elif temp.date_end > cal.date_end:
+                        temp = cal
                     print(cal.remark)
-                    return cal.remark
+            return temp.remark
         except:
             return "theres no yet announcement from BulSU administration"
 
-    return 'No update yet...'
+    return random.choice(['No update yet...',"There is no yet announcement from the BulSU administration" ])
 
 
 def addAction(transaction):
@@ -122,14 +179,15 @@ def sendQuery(request):
     tag = modelo.labels[results_index]
     ##adjust 
     # print("see level: "+results[results_index])
-    if results[results_index] > 0.97:
+    if results[results_index] > 0.98: #97 dati yan
+        print("Percentage: {}".format(results[results_index]))
         for tg in modelo.data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
 
         asnw = random.choice(responses)
     else:
-        asnw = "i hvae no response for that"
+        asnw = random.choice(["Sorry I can't understand you.", "Sorry, I don't understand"])
     tiny_response = {'response': asnw}
 
     if request.method == 'POST':
@@ -149,7 +207,7 @@ def sendQuery(request):
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
 def viewAllCourses(request):
-    courses = Course.objects.all()
+    courses = Course.objects.all().order_by('-id')
 
     serializer = CourseSerializer(courses, many=True)
     return Response(serializer.data)
@@ -160,8 +218,8 @@ def viewAllCourses(request):
 @permission_classes((IsAuthenticated,))
 def getCourseByCollege(request, college):
     courses = Course.objects.filter(college_acronym=college.upper())
-    if courses.count() == 0:
-        courses = Course.objects.filter(college__icontains=college)
+    # if courses.count() == 0:
+    #     courses = Course.objects.filter(college__icontains=college)
     if courses.count() == 0:
         return Response({'Message': 'No Courses Found'}, status=status.HTTP_404_NOT_FOUND)
     serializer = CourseSerializer(courses, many=True)
@@ -191,7 +249,14 @@ def deleteCourse(request, id):
 
 # add course
 @api_view(['POST', ])
-def addCourse(request, course_name, college, acronym, campus):
+def addCourse(request,):
+    course_name = request.data["course"]
+    college = request.data["college"]
+    campus = request.data["campus"]
+    acronym = request.data["acronym"]
+    print(request.data["campus"])
+
+
     try:
         newcourse = Course.objects.create(
             course=course_name,
@@ -211,25 +276,31 @@ def addCourse(request, course_name, college, acronym, campus):
 @api_view(['POST', ])
 def createUser(request, username, password, email, firstname, lastname, intent):
     if request.method == 'POST':
-        try:
-            user = User.objects.create_user(username=username,
-                                            email=email,
-                                            first_name=firstname,
-                                            last_name=lastname,
-                                            password=password)
-            intent = userIntent(intent=intent, user=user)
 
-            intent.save()
+        find_user = User.objects.filter(email__iexact=email)
+
+        if len(find_user) == 0:
+            try:
+                user = User.objects.create_user(username=username,
+                                                email=email,
+                                                first_name=firstname,
+                                                last_name=lastname,
+                                                password=password)
+                intent = userIntent(intent=intent, user=user)
+
+                intent.save()
+                
+                token = Token.objects.get(user=user)
+                return Response({
+                    "token": token.key,
+                    'user': token.user.username,
+                    'message': "created success"
+                    })
+            except:
+                return Response({'error': 'server error'})
+        else:
+            return Response({'error': 'Email is already taken'})
             
-            token = Token.objects.get(user=user)
-            return Response({
-                "token": token.key,
-                'user': token.user.username,
-                'message': "created success"
-                })
-        except:
-            return Response({'error': 'Username is already taken'})
-        
 
     
     # http://127.0.0.1:8000/tinyAPI/createUser/dawn12/124553/dawnhae.gmail.com/dawn/bugay/school related/
@@ -252,19 +323,52 @@ def getUsers(request):
     return Response(serializer.data)
 
 
+@api_view(['DELETE',])
+@permission_classes((IsAuthenticated,))
+def deleteUser(request, id):
+    try:
+        user = User.objects.get(id=id)
+        user.delete()
+        return Response({'MESSAGE': 'SUCCESSFULLLY DELETED'})
+    except:
+        return Response({'MESSAGE': 'unseccess'}, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['POST',])
+@permission_classes((IsAuthenticated,))
+def tryCaptcha(request):
+    token = request.data["captcha"]
+    data = {"recaptcha": token}
+    serializer = MySerializer(data=data)
+    if serializer.is_valid():
+        return Response({'success': True}, status=status.HTTP_200_OK)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 ####################################Admin routes#################################################
 #admin login
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
-def adminLogin(request, username, password):
+def adminLogin(request):
+    username = request.data["username"]
+    password = request.data["password"]
+    token = request.data["captcha"]
+    data = {"recaptcha": token}
+    serializer = MySerializer(data=data)
+
+    captcha_response = False
+
+    if serializer.is_valid():
+        captcha_response = True
+    else:
+        captcha_response = serializer.errors
+
     admin = authenticate(request, username=username, password=password)
     if admin is not None:
         if admin.is_staff:
-            return Response({'result': 'found', 'username': username, 'password': password})
+            return Response({'result': 'found', 'username': username, 'password': password, 'captcha_response': captcha_response})
 
-    return Response({'MESSAGE': 'Invallid Credential'}, status=status.HTTP_404_NOT_FOUND)
+    return Response({'MESSAGE': 'Invallid Credential', "captcha_response": captcha_response}, status=status.HTTP_404_NOT_FOUND)
     # http://127.0.0.1:8000/tinyAPI/adminLogin/kishinki/dawn123741/
 
 
@@ -286,7 +390,11 @@ def updateUsername(request, oldusername, newusername, password):
 #edit password
 @api_view(['POST',])
 @permission_classes((IsAuthenticated,))
-def updatePassword(request, username, password, newpassword):
+def updatePassword(request):
+    username = request.data["username"]
+    password = request.data["oldpassword"]
+    newpassword = request.data["newpassword"]
+
     admin = authenticate(request, username=username, password=password)
     if admin is not None:
         if admin.is_staff:
@@ -301,6 +409,87 @@ def updatePassword(request, username, password, newpassword):
     # u.set_password('dawn12374')
     # u.save()
     return Response({'result': 'not found'})
+
+
+import smtplib
+from email.message import EmailMessage
+
+@api_view(['POST',])
+@permission_classes((IsAuthenticated,))
+def forgetPassword(request):
+    email = request.data["email"]
+    newpassword = my_random_string(8)
+    try:
+        user = User.objects.get(email= email)
+
+        if user.is_staff == True:
+            user.set_password(newpassword)
+            user.save()
+            updatedadmin = User.objects.get(is_staff=True)
+
+            #send email
+            msg = EmailMessage()
+            msg['Subject'] = 'TInY admin password'
+            msg['From'] = 'dawn.bugay@gmail.com'
+            msg['To'] = 'dawn.bugay1004@gmail.com'
+
+            msg.set_content('New Password: '+newpassword)
+            msg.add_alternative("""\
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <style>
+                        *{
+                            padding:0;
+                            margin:0;
+                            box-sizing:border-box;
+                            font-family: sans-serif;
+                        }
+                        .container{
+                            background: #7d1b1c;
+                            color: white;
+                            padding: 10px 5px;
+                            width: 200px;
+                            text-align: center;
+                            margin-top: 10px;
+                            margin-bottom: 40px;
+                        }
+                        i{
+                            color: rgb(70, 70, 70);
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2>Your new password is</h2>
+                    <div class="container">
+                        <h1>"""+newpassword+ """</h1>
+                    </div>
+
+                    <i>Note: After logging-in using this password, it is best to change your password.</i>
+                </body>
+            </html>
+            """, subtype='html')
+
+
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                smtp.login("dawn.bugay@gmail.com", "hxqzylnzpvjmrzfj")
+                smtp.send_message(msg)
+
+            ##sending response
+            return Response({
+                'id': updatedadmin.id, 
+                'new_password': newpassword,
+            })
+        else:
+            return Response({"error": "Email is incorrect..!!!"})
+
+    
+    except:
+        return Response({'result': 'Server Error'})
+
+
+
+
 
 @api_view(['GET',])
 @permission_classes((IsAuthenticated,))
@@ -325,8 +514,11 @@ def getExecutives(request):
 
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
-def updateExecutive(request, id, name):
+def updateExecutive(request):
     try:
+        id = request.data["id"]
+        name = request.data["name"]
+
         Executive.objects.filter(id=id).update(name=name)
         executive = Executive.objects.get(id=id)
 
@@ -346,8 +538,11 @@ def getDean(request):
 
 @api_view(['PATCH', ])
 @permission_classes((IsAuthenticated,))
-def updateDean(request, id, name):
+def updateDean(request):
     try:
+        id = request.data["id"]
+        name = request.data["name"]
+
         Dean.objects.filter(id=id).update(name=name)
         dean = Dean.objects.get(id=id)
 
@@ -367,8 +562,11 @@ def getPopulation(request):
 
 @api_view(['PATCH', ])
 @permission_classes((IsAuthenticated,))
-def updatePopulation(request, id, student_population):
+def updatePopulation(request,):
     try:
+        id= request.data["id"]
+        student_population = request.data["student_population"]
+
         Population.objects.filter(id=id).update(
             student_population=int(student_population))
         population = Population.objects.get(id=id)
@@ -401,6 +599,37 @@ def updateRandom(request, id):
         return Response({'MESSAGE': 'ID NOT FOUND'}, status=status.HTTP_404_NOT_FOUND)
 
 
+@api_view(['GET',])
+@permission_classes((IsAuthenticated,))
+def getContacts(request):
+    contact = Contact.objects.all().order_by('id')
+    serializer = ContactSerializer(contact, many=True)
+    return Response(serializer.data)
+
+@api_view(['PATCH',])
+@permission_classes((IsAuthenticated,))
+def updateContact(request):
+    try:
+        id =  request.data['id']
+        email =  request.data['email']
+        facebook =  request.data['facebook']
+        landline =  request.data['landline']
+        college_secretary =  request.data['college_secretary']
+
+        Contact.objects.filter(id=id).update(
+            email=email,
+            facebook = facebook,
+            landline = landline,
+            college_secretary = college_secretary
+        )
+
+        contact = Contact.objects.get(id=id)
+        return Response({"MESSAGE": "BASTA SUCCESS YAN"})
+    except:
+        return Response({'MESSAGE': 'ID NOT FOUND'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
 ######################calendar routes#################
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
@@ -430,7 +659,16 @@ def getAllHolidays(request):
 
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
-def addCalendarEvent(request, event, date_start, date_end, remark, name, color):
+def addCalendarEvent(request):
+    # ${info.event}/${info.date_start}/${info.date_end}/${info.remark}/${info.name}/${encodeURIComponent(info.color)}
+    event = request.data["event"]
+    date_start = request.data["date_start"]
+    date_end = request.data["date_end"]
+    remark = request.data["remark"]
+    name = request.data["name"]
+    color = request.data["color"]
+    
+    
     try:
         new_event = Calendar.objects.create(
             event=event,
@@ -450,7 +688,9 @@ def addCalendarEvent(request, event, date_start, date_end, remark, name, color):
 
 @api_view(['PATCH', ])
 @permission_classes((IsAuthenticated,))
-def updateCalendarEvent(request, id, remark):
+def updateCalendarEvent(request, id):
+    remark = request.data["detail"]
+
     try:
         Calendar.objects.filter(id=id).update(
             remark=remark
@@ -488,3 +728,46 @@ def deleteCalendarEvent(request, id):
 # @api_view(['GET',])
 # @permission_classes((IsAuthenticated,))
 # def getAllToken
+
+
+
+
+######bot config######
+
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def getChatbotSettings(request):
+    settings = ChatbotSettings.objects.all()
+
+    serializer = ChatbotSettingsSerializer(settings, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['PATCH', ])
+@permission_classes((IsAuthenticated,))
+def updateChatbotSettings(request):
+    try:
+        key = request.data['key']
+        is_disable = request.data['is_disable']
+
+        ChatbotSettings.objects.filter(key=key).update(
+            is_disable=is_disable)
+        setting = ChatbotSettings.objects.get(key=key)
+
+        return Response({'key': setting.key, 'message': setting.message, 'is_disable': setting.is_disable})
+    except:
+        return Response({'MESSAGE': 'ID NOT FOUND'}, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['PATCH', ])
+@permission_classes((IsAuthenticated,))
+def updateIntroMessage(request):
+    try:
+        new_message = request.data['message']
+
+        ChatbotSettings.objects.filter(key="intro_message").update(
+            message=new_message)
+
+        return Response({"message": "success"})
+    except:
+        return Response({'MESSAGE': 'ID NOT FOUND'}, status=status.HTTP_404_NOT_FOUND)

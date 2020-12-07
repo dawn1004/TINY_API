@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 from django.conf import settings
 from django.db.models.signals import post_save
@@ -27,7 +28,16 @@ class Course(models.Model):
     course = models.CharField(max_length=500)
     college = models.CharField(max_length=500)
     college_acronym = models.CharField(max_length=100, default='unavailable')
-    campus = models.CharField(max_length=500)
+    campus = ArrayField(models.CharField(max_length=50), blank=True)
+
+
+class Contact(models.Model):
+    office_name = models.CharField(max_length=1000)
+    email = models.EmailField(max_length = 5000, blank=True)
+    facebook = models.URLField(max_length = 2000, blank=True)
+    landline = models.CharField(max_length = 500, blank=True)
+    college_secretary = models.CharField(max_length = 500, blank=True)
+    ref = models.CharField(max_length = 500, blank=True)
 
 
 class userIntent(models.Model):
@@ -66,3 +76,9 @@ class Action(models.Model):
     action = models.CharField(max_length=150)
     date = models.DateField(default=date.today)
     time = models.TimeField(auto_now_add=True)
+
+
+class ChatbotSettings(models.Model):
+    key = models.CharField(max_length=150)
+    message = models.CharField(max_length=150, default="")
+    is_disable = models.BooleanField(max_length=150, default=False)

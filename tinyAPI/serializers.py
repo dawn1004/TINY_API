@@ -1,7 +1,8 @@
 from rest_framework import serializers
-from .models import Course, Executive, Dean, Population, Random, Action, Calendar
+from .models import Course, Executive, Dean, Population, Random, Action, Calendar, ChatbotSettings, Contact
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
+from rest_framework_recaptcha.fields import ReCaptchaField
 
 # class TinyResponseSerializer(serializers.ModelSerializer):
 #     class Meta:
@@ -68,6 +69,28 @@ class AuthTokenSerializer(serializers.ModelSerializer):
     class Meta:
         model = Token
         fields = '__all__'
+
+
+class ChatbotSettingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatbotSettings
+        fields = '__all__'
+
+
+class MySerializer(serializers.Serializer):
+    recaptcha = ReCaptchaField(write_only=True)
+
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = "__all__"
+
+
+# class MyReCaptchaField(ReCaptchaField):
+#     default_error_messages = {
+#         "invalid-input-response": "reCAPTCHA token is invalid.",
+#     }
 
 # class CourseByCollegeSerializer(serializers.Serializer):
 #     response = serializers.CharField(max_length=500)
