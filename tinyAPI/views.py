@@ -179,7 +179,7 @@ def sendQuery(request):
     tag = modelo.labels[results_index]
     ##adjust 
     # print("see level: "+results[results_index])
-    if results[results_index] > 0.98: #97 dati yan
+    if results[results_index] > 0.90: #97 dati yan ##98
         print("Percentage: {}".format(results[results_index]))
         for tg in modelo.data["intents"]:
             if tg['tag'] == tag:

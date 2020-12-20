@@ -71,7 +71,11 @@
         "Current President of Bulacan State University",
         "Who is the President of BulSU?",
         "BulSU President",
-        "Current President of BulSU"
+        "Current President of BulSU",
+        "What is the name of bulsu president?",
+        "name of the president of bulsu",
+        "What is the name of Bulacan state university president?",
+        "name of the president of Bulacan state university"
       ],
       "responses": [
         "executives^president"
@@ -88,7 +92,11 @@
         "Current Executive Vice President of Bulacan State University",
         "Who is the Executive Vice President of BulSU?",
         "BulSU Executive Vice President",
-        "Current Executive Vice President of BulSU"
+        "Current Executive Vice President of BulSU",
+        "What is the name of bulsu Executive Vice President",
+        "name of the Executive Vice President of bulsu",
+        "What is the name of Bulacan state university Executive Vice President?",
+        "name of the Executive Vice President of Bulacan state university"
       ],
       "responses": [
         "executives^Executive Vice President"
@@ -105,7 +113,11 @@
         "Current Vice President for Research, Development and Extension of Bulacan State University",
         "Who is the Vice President for Research, Development and Extension of BulSU?",
         "BulSU Vice President for Research, Development and Extension",
-        "Current Vice President for Research, Development and Extension of BulSU"
+        "Current Vice President for Research, Development and Extension of BulSU",
+        "What is the name of bulsu Vice President for Research, Development and Extension?",
+        "name of the Vice President for Research, Development and Extension of bulsu",
+        "What is the name of Bulacan state university Vice President for Research, Development and Extension?",
+        "name of the Vice President for Research, Development and Extension of Bulacan state university"
       ],
       "responses": [
         "executives^Vice President for Research"
@@ -122,7 +134,11 @@
         "Current Vice President for Administration and Finance of Bulacan State University",
         "Who is the Vice President for Administration and Finance of BulSU?",
         "BulSU Vice President for Administration and Finance",
-        "Current Vice President for Administration and Finance of BulSU"
+        "Current Vice President for Administration and Finance of BulSU",
+        "What is the name of bulsu Vice President for Administration and Finance?",
+        "name of the Vice President for Administration and Finance of bulsu",
+        "What is the name of Bulacan state university Vice President for Administration and Finance?",
+        "name of the Vice President for Administration and Finance of Bulacan state university"
       ],
       "responses": [
         "executives^Vice President for Administration and Finance"
@@ -139,10 +155,14 @@
         "Who is the Vice President for Academic Affairs of BulSU?",
         "University Vice President for Academic Affairs",
         "BulSU Vice President for Academic Affairs",
-        "executives^Current Vice President for Academic Affairs of BulSU"
+        "Current Vice President for Academic Affairs of BulSU",
+        "What is the name of bulsu Vice President for Academic Affairs?",
+        "name of the Vice President for Academic Affairs of bulsu",
+        "What is the name of Bulacan state university Vice President for Academic Affairs?",
+        "name of the Vice President for Academic Affairs of Bulacan state university"
       ],
       "responses": [
-        "Vice President for Academic Affairs"
+        "executives^Vice President for Academic Affairs"
       ],
       "context_set": ""
     },
@@ -153,7 +173,13 @@
         "Who is the dean of graduate school?",
         "Graduate school dean",
         "Dean of graduate school",
-        "current dean of graduate school"
+        "current dean of graduate school",
+        "what is the name of the dean of  graduate school?",
+        "Name of  graduate school dean?",
+        "dean of  graduate school name?",
+        "What is the deans name of  graduate school",
+        "graduate school deans name?",
+        "Do you know who is the dean of  graduate school"
       ],
       "responses": [
         "deans^graduate school"
@@ -171,7 +197,19 @@
         "Who is the dean of CAFA?",
         "CAFA dean",
         "Dean of CAFA",
-        "Current dean of CAFA"
+        "Current dean of CAFA",
+        "what is the name of the dean of College of Architecture and Fine Arts?",
+        "what is the name of the dean of CAFA?",
+        "Name of College of Architecture and Fine Arts dean?",
+        "Name of CAFA dean?",
+        "dean of College of Architecture and Fine Arts name?",
+        "dean of CAFA name?",
+        "What is the deans name of College of Architecture and Fine Arts",
+        "What is the deans name of CAFA",
+        "College of Architecture and Fine Arts deans name?",
+        "CAFA deans name?",
+        "Do you know who is the dean of College of Architecture and Fine Arts",
+        "Do you know who is the dean of CAFA"
       ],
       "responses": [
         "deans^CAFA"
@@ -189,7 +227,19 @@
         "Who is the dean of CAL?",
         "CAL dean",
         "Dean of CAL",
-        "Current dean of CAL"
+        "Current dean of CAL",
+        "what is the name of the dean of College of Arts and Letters?",
+        "what is the name of the dean of CAL?",
+        "Name of College of Arts and Letters dean?",
+        "Name of CAL dean?",
+        "dean of College of Arts and Letters name?",
+        "dean of CAL name?",
+        "What is the deans name of College of Arts and Letters",
+        "What is the deans name of CAL",
+        "College of Arts and Letters deans name?",
+        "CAL deans name?",
+        "Do you know who is the dean of College of Arts and Letters",
+        "Do you know who is the dean of CAL"
       ],
       "responses": [
         "deans^CAL"
@@ -207,7 +257,19 @@
         "Who is the dean of CBA?",
         "CBA dean",
         "Dean of CBA",
-        "Current dean of CBA"
+        "Current dean of CBA",
+        "what is the name of the dean of College of Business Administration?",
+        "what is the name of the dean of CBA?",
+        "Name of College of Business Administration dean?",
+        "Name of CBA dean?",
+        "dean of College of Business Administration name?",
+        "dean of CBA name?",
+        "What is the deans name of College of Business Administration",
+        "What is the deans name of CBA",
+        "College of Business Administration deans name?",
+        "CBA deans name?",
+        "Do you know who is the dean of College of Business Administration",
+        "Do you know who is the dean of CBA"
       ],
       "responses": [
         "deans^CBA"
@@ -225,7 +287,19 @@
         "Who is the dean of CCJE?",
         "CCJE dean",
         "Dean of CCJE",
-        "Current dean of CCJE"
+        "Current dean of CCJE",
+        "what is the name of the dean of College of Criminal Justice Education?",
+        "what is the name of the dean of CCJE?",
+        "Name of College of Criminal Justice Education dean?",
+        "Name of CCJE dean?",
+        "dean of College of Criminal Justice Education name?",
+        "dean of CCJE name?",
+        "What is the deans name of College of Criminal Justice Education",
+        "What is the deans name of CCJE",
+        "College of Criminal Justice Education deans name?",
+        "CCJE deans name?",
+        "Do you know who is the dean of College of Criminal Justice Education",
+        "Do you know who is the dean of CCJE"
       ],
       "responses": [
         "deans^CCJE"
@@ -243,7 +317,19 @@
         "Who is the dean of CHTM?",
         "CHTM dean",
         "Dean of CHTM",
-        "Current dean of CHTM"
+        "Current dean of CHTM",
+        "what is the name of the dean of College of Hospitality and Tourism Management?",
+        "what is the name of the dean of CHTM?",
+        "Name of College of Hospitality and Tourism Management dean?",
+        "Name of CHTM dean?",
+        "dean of College of Hospitality and Tourism Management name?",
+        "dean of CHTM name?",
+        "What is the deans name of College of Hospitality and Tourism Management",
+        "What is the deans name of CHTM",
+        "College of Hospitality and Tourism Management deans name?",
+        "CHTM deans name?",
+        "Do you know who is the dean of College of Hospitality and Tourism Management",
+        "Do you know who is the dean of CHTM"
       ],
       "responses": [
         "deans^CHTM"
@@ -261,7 +347,19 @@
         "Who is the dean of CICT?",
         "CICT dean",
         "Dean of CICT",
-        "Current dean of CICT"
+        "Current dean of CICT",
+        "what is the name of the dean of College of Information and Communications Technology?",
+        "what is the name of the dean of CICT?",
+        "Name of College of Information and Communications Technology dean?",
+        "Name of CICT dean?",
+        "dean of College of Information and Communications Technology name?",
+        "dean of CICT name?",
+        "What is the deans name of College of Information and Communications Technology",
+        "What is the deans name of CICT",
+        "College of Information and Communications Technology deans name?",
+        "CICT deans name?",
+        "Do you know who is the dean of College of Information and Communications Technology",
+        "Do you know who is the dean of CICT"
       ],
       "responses": [
         "deans^CICT"
@@ -279,7 +377,19 @@
         "Who is the dean of CIT?",
         "CIT dean",
         "Dean of CIT",
-        "Current dean of CIT"
+        "Current dean of CIT",
+        "what is the name of the dean of College of Industrial Technology?",
+        "what is the name of the dean of CIT?",
+        "Name of College of Industrial Technology dean?",
+        "Name of CIT dean?",
+        "dean of College of Industrial Technology name?",
+        "dean of CIT name?",
+        "What is the deans name of College of Industrial Technology",
+        "What is the deans name of CIT",
+        "College of Industrial Technology deans name?",
+        "CIT deans name?",
+        "Do you know who is the dean of College of Industrial Technology",
+        "Do you know who is the dean of CIT"
       ],
       "responses": [
         "deans^CIT"
@@ -297,7 +407,19 @@
         "Who is the dean of CLaw?",
         "CLaw dean",
         "Dean of CLaw",
-        "Current dean of CLaw"
+        "Current dean of CLaw",
+        "what is the name of the dean of College of Law?",
+        "what is the name of the dean of CLaw?",
+        "Name of College of Law dean?",
+        "Name of CLaw dean?",
+        "dean of College of Law name?",
+        "dean of CLaw name?",
+        "What is the deans name of College of Law",
+        "What is the deans name of CLaw",
+        "College of Law deans name?",
+        "CLaw deans name?",
+        "Do you know who is the dean of College of Law",
+        "Do you know who is the dean of CLaw"
       ],
       "responses": [
         "deans^CLaw"
@@ -315,7 +437,19 @@
         "Who is the dean of CON?",
         "CON dean",
         "Dean of CON",
-        "Current dean of CON"
+        "Current dean of CON",
+        "what is the name of the dean of College of Nursing?",
+        "what is the name of the dean of CON?",
+        "Name of College of Nursing dean?",
+        "Name of CON dean?",
+        "dean of College of Nursing name?",
+        "dean of CON name?",
+        "What is the deans name of College of Nursing",
+        "What is the deans name of CON",
+        "College of Nursing deans name?",
+        "CON deans name?",
+        "Do you know who is the dean of College of Nursing",
+        "Do you know who is the dean of CON"
       ],
       "responses": [
         "deans^CON"
@@ -333,7 +467,19 @@
         "Who is the dean of COE?",
         "COE dean",
         "Dean of COE",
-        "Current dean of COE"
+        "Current dean of COE",
+        "what is the name of the dean of College of Engineering?",
+        "what is the name of the dean of COE?",
+        "Name of College of Engineering dean?",
+        "Name of COE dean?",
+        "dean of College of Engineering name?",
+        "dean of COE name?",
+        "What is the deans name of College of Engineering",
+        "What is the deans name of COE",
+        "College of Engineering deans name?",
+        "COE deans name?",
+        "Do you know who is the dean of College of Engineering",
+        "Do you know who is the dean of COE"
       ],
       "responses": [
         "deans^COE"
@@ -351,7 +497,19 @@
         "Who is the dean of COED?",
         "COED dean",
         "Dean of COED",
-        "Current dean of COED"
+        "Current dean of COED",
+        "what is the name of the dean of College of Education?",
+        "what is the name of the dean of COED?",
+        "Name of College of Education dean?",
+        "Name of COED dean?",
+        "dean of College of Education name?",
+        "dean of COED name?",
+        "What is the deans name of College of Education",
+        "What is the deans name of COED",
+        "College of Education deans name?",
+        "COED deans name?",
+        "Do you know who is the dean of College of Education",
+        "Do you know who is the dean of COED"
       ],
       "responses": [
         "deans^COED"
@@ -369,7 +527,19 @@
         "Who is the dean of CS?",
         "CS dean",
         "Dean of CS",
-        "Current dean of CS"
+        "Current dean of CS",
+        "what is the name of the dean of College of Science?",
+        "what is the name of the dean of CS?",
+        "Name of College of Science dean?",
+        "Name of CS dean?",
+        "dean of College of Science name?",
+        "dean of CS name?",
+        "What is the deans name of College of Science",
+        "What is the deans name of CS",
+        "College of Science deans name?",
+        "CS deans name?",
+        "Do you know who is the dean of College of Science",
+        "Do you know who is the dean of CS"
       ],
       "responses": [
         "deans^CS"
@@ -387,7 +557,19 @@
         "Who is the dean of CSER?",
         "CSER dean",
         "Dean of CSER",
-        "Current dean of CSER"
+        "Current dean of CSER",
+        "what is the name of the dean of College of Sports, Exercise and Recreation?",
+        "what is the name of the dean of CSER?",
+        "Name of College of Sports, Exercise and Recreation dean?",
+        "Name of CSER dean?",
+        "dean of College of Sports, Exercise and Recreation name?",
+        "dean of CSER name?",
+        "What is the deans name of College of Sports, Exercise and Recreation",
+        "What is the deans name of CSER",
+        "College of Sports, Exercise and Recreation deans name?",
+        "CSER deans name?",
+        "Do you know who is the dean of College of Sports, Exercise and Recreation",
+        "Do you know who is the dean of CSER"
       ],
       "responses": [
         "deans^CSER"
@@ -405,7 +587,19 @@
         "Who is the dean of CSSP?",
         "CSSP dean",
         "Dean of CSSP",
-        "Current dean of CSSP"
+        "Current dean of CSSP",
+        "what is the name of the dean of College of Social Sciences and Philosophy?",
+        "what is the name of the dean of CSSP?",
+        "Name of College of Social Sciences and Philosophy dean?",
+        "Name of CSSP dean?",
+        "dean of College of Social Sciences and Philosophy name?",
+        "dean of CSSP name?",
+        "What is the deans name of College of Social Sciences and Philosophy",
+        "What is the deans name of CSSP",
+        "College of Social Sciences and Philosophy deans name?",
+        "CSSP deans name?",
+        "Do you know who is the dean of College of Social Sciences and Philosophy",
+        "Do you know who is the dean of CSSP"
       ],
       "responses": [
         "deans^CSSP"
@@ -430,7 +624,13 @@
         "Where can i locate the CSSP?",          
         "building of CSSP",
         "CSSP building",
-        "CSSP location"
+        "CSSP location",
+        "how can i find the College of Social Science and Psychology?",
+        "how can i find the CSSP?",
+        "Do you know where is the College of Social Science and Psychology?",
+        "Do you know where is the CSSP?",
+        "Where is the exact location of College of Social Science and Psychology building",
+        "Where is the exact location of CSSP building"
       ],
       "responses": [
         "The College of Social Science and Psychology (CSSP) is located in front of the BulSU's 4th gate. This building is named Mendoza Hall."
@@ -455,7 +655,13 @@
         "Where can i locate the CSER?",          
         "building of CSER",
         "CSER building",
-        "CSER location"
+        "CSER location",
+        "how can i find the College of Sports, Exercise and Recreation?",
+        "how can i find the CSER?",
+        "Do you know where is the College of Sports, Exercise and Recreation?",
+        "Do you know where is the CSER?",
+        "Where is the exact location of College of Sports, Exercise and Recreation building",
+        "Where is the exact location of CSER building"
       ],
       "responses": [
         "The College of Sports, Exercise and Recreation (CSER) is located in Chess Institute in front of Federizo Hall."
@@ -480,7 +686,13 @@
         "Where can i locate the LAB HIGH?",          
         "building of LAB HIGH",
         "LAB HIGH building",
-        "LAB HIGH location"
+        "LAB HIGH location",
+        "how can i find the LABORATORY HIGH SCHOOL?",
+        "how can i find the LAB HIGH?",
+        "Do you know where is the LABORATORY HIGH SCHOOL?",
+        "Do you know where is the LAB HIGH?",
+        "Where is the exact location of LABORATORY HIGH SCHOOL building",
+        "Where is the exact location of LAB HIGH building"
       ],
       "responses": [
         "The Laboratory Highschool building is located in front of BulSU Heroes Park and Roxas Hall. This building is named Carpio Hall."
@@ -505,7 +717,13 @@
         "Where can i locate the CCJE?",          
         "building of CCJE",
         "CCJE building",
-        "CCJE location"
+        "CCJE location",
+        "how can i find the Criminal Justice Education?",
+        "how can i find the CCJE?",
+        "Do you know where is the Criminal Justice Education?",
+        "Do you know where is the CCJE?",
+        "Where is the exact location of Criminal Justice Education building",
+        "Where is the exact location of CCJE building"
       ],
       "responses": [
         "The College of Criminal Justice Education (CCJE) is located in front of the BulSU's 3rd gate."
@@ -530,7 +748,13 @@
         "Where can i locate the CHTM?",          
         "building of CHTM",
         "CHTM building",
-        "CHTM location"
+        "CHTM location",
+        "how can i find the College of Hospitality and Tourism Management?",
+        "how can i find the CHTM?",
+        "Do you know where is the College of Hospitality and Tourism Management?",
+        "Do you know where is the CHTM?",
+        "Where is the exact location of College of Hospitality and Tourism Management building",
+        "Where is the exact location of CHTM building"
       ],
       "responses": [
         "The College of Hospitality and Tourism Management (CHTM) is located beside the BulSU hostel building."
@@ -555,7 +779,13 @@
         "Where can i locate the COED?",          
         "building of COED",
         "COED building",
-        "COED location"
+        "COED location",
+        "how can i find the College of Education?",
+        "how can i find the COED?",
+        "Do you know where is the College of Education?",
+        "Do you know where is the COED?",
+        "Where is the exact location of College of Education building",
+        "Where is the exact location of COED building"
       ],
       "responses": [
         "The College of Education (COED) is located in front of BulSU Heroes Park. This building is named Roxas Hall."
@@ -580,7 +810,13 @@
         "Where can i locate the CAFA?",          
         "building of CAFA",
         "CAFA building",
-        "CAFA location"
+        "CAFA location",
+        "how can i find the College of Architecture and Fine Arts?",
+        "how can i find the CAFA?",
+        "Do you know where is the College of Architecture and Fine Arts?",
+        "Do you know where is the CAFA?",
+        "Where is the exact location of College of Architecture and Fine Arts building",
+        "Where is the exact location of CAFA building"
       ],
       "responses": [
         "The College of Architecture and Fine Arts (CAFA) is located on the 3rd floor of Federizo Hall."
@@ -605,7 +841,13 @@
         "Where can i locate the CAL?",          
         "building of CAL",
         "CAL building",
-        "CAL location"
+        "CAL location",
+        "how can i find the College of Arts and Letters?",
+        "how can i find the CAL?",
+        "Do you know where is the College of Arts and Letters?",
+        "Do you know where is the CAL?",
+        "Where is the exact location of College of Arts and Letters building",
+        "Where is the exact location of CAL building"
       ],
       "responses": [
         "The College of Arts and Letters (CAL) is located on the right ground floor and right side of the 2nd floor in Federizo Hall."
@@ -630,7 +872,13 @@
         "Where can i locate the CS?",          
         "building of CS",
         "CS building",
-        "CS location"
+        "CS location",
+        "how can i find the College of Science?",
+        "how can i find the CS?",
+        "Do you know where is the College of Science?",
+        "Do you know where is the CS?",
+        "Where is the exact location of College of Science building",
+        "Where is the exact location of CS building"
       ],
       "responses": [
         "The College of Science (CS) is located on the left ground floor and left side of the 2nd floor in Federizo Hall and it is behind BulSU Heroes Park."
@@ -655,7 +903,13 @@
         "Where can i locate the COE?",          
         "building of COE",
         "COE building",
-        "COE location"
+        "COE location",
+        "how can i find the College of Engineering?",
+        "how can i find the COE?",
+        "Do you know where is the College of Engineering?",
+        "Do you know where is the COE?",
+        "Where is the exact location of College of Engineering building",
+        "Where is the exact location of COE building"
       ],
       "responses": [
         "The College of Engineering (COE) building is located on the right side of BulSU Heroes Park. This building is named Natividad Hall."
@@ -680,7 +934,13 @@
         "Where can i locate the CBA?",          
         "building of CBA",
         "CBA building",
-        "CBA location"
+        "CBA location",
+        "how can i find the College of Business Administration?",
+        "how can i find the CBA?",
+        "Do you know where is the College of Business Administration?",
+        "Do you know where is the CBA?",
+        "Where is the exact location of College of Business Administration building",
+        "Where is the exact location of CBA building"
       ],
       "responses": [
         "The College of Business Administration (CBA) building is located on the left side of BulSU Heroes Park."
@@ -705,7 +965,13 @@
         "Where can i locate the CIT?",          
         "building of CIT",
         "CIT building",
-        "CIT location"
+        "CIT location",
+        "how can i find the College of industrial technology?",
+        "how can i find the CIT?",
+        "Do you know where is the College of industrial technology?",
+        "Do you know where is the CIT?",
+        "Where is the exact location of College of industrial technology building",
+        "Where is the exact location of CIT building"
       ],
       "responses": [
         "The College of Industrial Technology (CIT) is located after entering the main gate. This building is named Alvarado Hall."
@@ -730,7 +996,13 @@
         "Where can i locate the CLaw?",          
         "building of CLaw",
         "CLaw building",
-        "CLaw location"
+        "CLaw location",
+        "how can i find the College of Law?",
+        "how can i find the CLaw?",
+        "Do you know where is the College of Law?",
+        "Do you know where is the CLaw?",
+        "Where is the exact location of College of Law building",
+        "Where is the exact location of CLaw building"
       ],
       "responses": [
         "The College of Law (CLaw) is located in front of Activity Center."
@@ -738,7 +1010,7 @@
       "context_set": ""
     },
     {
-      "tag": "CN location",
+      "tag": "CON location",
       "patterns": [
         "What building was College of Nursing located?",
         "Where is the Location of College of Nursing?",
@@ -748,17 +1020,23 @@
         "Where can i find the College of Nursing?",
         "Where can i locate the College of Nursing?",
         "College of Nursing building",
-        "What building was CN located?",
-        "Location of CN",
-        "Where can i find the CN?",
-        "Where is the location of CN",
-        "Where can i locate the CN?",          
-        "building of CN",
-        "CN building",
-        "CN location"
+        "What building was CON located?",
+        "Location of CON",
+        "Where can i find the CON?",
+        "Where is the location of CON",
+        "Where can i locate the CON?",          
+        "building of CON",
+        "CON building",
+        "CON location",
+        "how can i find the College of Nursing?",
+        "how can i find the CON?",
+        "Do you know where is the College of Nursing?",
+        "Do you know where is the CON?",
+        "Where is the exact location of College of Nursing building",
+        "Where is the exact location of CON building"
       ],
       "responses": [
-        "The College of Nursing (CN) is located on the ground floor and the 2nd floor of Pimentel Hall beside of Activity Center."
+        "The College of Nursing (CON) is located on the ground floor and the 2nd floor of Pimentel Hall beside of Activity Center."
       ],
       "context_set": ""
     },
@@ -780,7 +1058,13 @@
         "Where can i locate the CICT?",          
         "building of CICT",
         "CICT building",
-        "CICT location" 
+        "CICT location",
+        "how can i find the College of Information and Communication Technology?",
+        "how can i find the CICT?",
+        "Do you know where is the College of Information and Communication Technology?",
+        "Do you know where is the CICT?",
+        "Where is the exact location of College of Information and Communication Technology building",
+        "Where is the exact location of CICT building"
       ],
       "responses": [
         "The College of Information and Communication Technology (CICT) is located on the 3rd floor and 4th floor of Pimentel Hall beside of Activity Center."
@@ -804,7 +1088,17 @@
         "where is the location of Bulacan state university main?",
         "address of bulsu",
         "address of Bulacan state university",
-        "address of bulsu main"
+        "address of bulsu main",
+        "exact location of bulsu",
+        "exact location of bulsu main",
+        "exact location of Bulacan state university",
+        "do you know where is bulsu location",
+        "do you know where is bulsu main location",
+        "do you know what is the address of bulsu",
+        "do you know what is the address of bulsu main",
+        "do you know where to find bulsu main?",
+        "do you know where to find bulsu?",
+        "do you know where to find Bulacan state university?"
 
       ],
       "responses": [
@@ -827,7 +1121,16 @@
         "where is the location of Bustos Campus?",
         "where is the location of BulSU Bustos Campus?",
         "Location of Bustos Campus",
-        "Address of Bustos Campus"
+        "Address of Bustos Campus",
+        "exact location of Bustos Campus",
+        "exact location of Bulacan state university Bustos Campus",
+        "do you know where is bulsu Bustos Campus location",
+        "do you know where is Bustos Campus location",
+        "do you know what is the address of Bustos Campus",
+        "do you know what is the address of bulsu Bustos Campus",
+        "do you know where to find bulsu Bustos Campus?",
+        "do you know where to find Bustos Campus?",
+        "do you know where to find Bulacan state university Bustos Campus?"
       ],
       "responses": [
         "BulSU Bustos Campus is located at C.L. Hilario Street, Bustos, Bulacan",
@@ -849,7 +1152,16 @@
         "where is the location of Meneses Campus?",
         "where is the location of BulSU Meneses Campus?",
         "Location of Meneses Campus",
-        "Address of Meneses Campus"
+        "Address of Meneses Campus",
+        "exact location of Meneses Campus",
+        "exact location of Bulacan state university Meneses Campus",
+        "do you know where is bulsu Meneses Campus location",
+        "do you know where is Meneses Campus location",
+        "do you know what is the address of Meneses Campus",
+        "do you know what is the address of bulsu Meneses Campus",
+        "do you know where to find bulsu Meneses Campus?",
+        "do you know where to find Meneses Campus?",
+        "do you know where to find Bulacan state university Meneses Campus?"
       ],
       "responses": [
         "BulSU Meneses Campus is located in town of Bulakan, Bulacan",
@@ -871,7 +1183,16 @@
         "where is the location of Sarmiento Campus?",
         "where is the location of BulSU Sarmiento Campus?",
         "Location of Sarmiento Campus",
-        "Address of Sarmiento Campus"
+        "Address of Sarmiento Campus",
+        "exact location of Sarmiento Campus",
+        "exact location of Bulacan state university Sarmiento Campus",
+        "do you know where is bulsu Sarmiento Campus location",
+        "do you know where is Sarmiento Campus location",
+        "do you know what is the address of Sarmiento Campus",
+        "do you know what is the address of bulsu Sarmiento Campus",
+        "do you know where to find bulsu Sarmiento Campus?",
+        "do you know where to find Sarmiento Campus?",
+        "do you know where to find Bulacan state university Sarmiento Campus?"
       ],
       "responses": [
         "BulSU Sarmiento Campus is located at City of San Jose Del Monte, Bulacan",
@@ -893,7 +1214,16 @@
         "where is the location of Hagonoy Campus?",
         "where is the location of BulSU Hagonoy Campus?",
         "Location of Hagonoy Campus",
-        "Address of Hagonoy Campus"
+        "Address of Hagonoy Campus",
+        "exact location of Hagonoy Campus",
+        "exact location of Bulacan state university Hagonoy Campus",
+        "do you know where is bulsu Hagonoy Campus location",
+        "do you know where is Hagonoy Campus location",
+        "do you know what is the address of Hagonoy Campus",
+        "do you know what is the address of bulsu Hagonoy Campus",
+        "do you know where to find bulsu Hagonoy Campus?",
+        "do you know where to find Hagonoy Campus?",
+        "do you know where to find Bulacan state university Hagonoy Campus?"
       ],
       "responses": [
         "BulSU Hagonoy Campus is located in province of Hagonoy, Bulacan",
@@ -925,7 +1255,15 @@
         "What is the Vision of BulSU?",
         "Vision of BulSU",
         "University Vision",
-        "Vision of Bulacan State University"
+        "Vision of Bulacan State University",
+
+
+        "Do you know what is bulsu vision?",
+        "Do you know what is the vison of bulsu?",
+        "What is the new university vision",
+        "new vision of bulsu",
+        "what is the new vision of bulsu?",
+        "About vision of bulsu"
       ],
       "responses": [
         "The Vision of Bulacan State University is a progressive knowledge-generating institution globally recognized for excellent instruction, pioneering research, and responsive community engagements"
@@ -941,7 +1279,13 @@
         "University Mission",
         "Bulsu Mission",
         "Mission of Bulacan State University",
-        "Bulacan State University Mission"
+        "Bulacan State University Mission",
+        "Do you know what is bulsu Mission?",
+        "Do you know what is the Mission of bulsu?",
+        "What is the new university Mission",
+        "new Mission of bulsu",
+        "what is the new Mission of bulsu?",
+        "About Mission of bulsu"
       ],
       "responses": [
         "The Mission of Bulacan State University exists to produce highly competent, ethical and service-oriented professionals that contribute to the sustainable socio-economic growth and development of the nation."
@@ -957,7 +1301,13 @@
         "Goal of Bulacan State University",
         "Bulacan State University Goal",
         "BulSU Goal",
-        "University Goal"
+        "University Goal",
+        "Do you know what is bulsu Goal?",
+        "Do you know what is the Goal of bulsu?",
+        "What is the new university Goal",
+        "new Goal of bulsu",
+        "what is the new Goal of bulsu?",
+        "About Goal of bulsu"
       ],
       "responses": [
         "The Goal of Bulacan State University is to Provide Relevant Quality and Accessible Education, Innovative and Responsive Research and Public Engagement, BulSU in Regional Development, Sound Financial Management and Good Governance. To know more details about the Goals of BulSU visit https://bulsu.edu.ph/about/ "
@@ -971,7 +1321,12 @@
         "BulSU Contact",
         "Bulacan State University Contact",
         "What is the contact of BulSU?",
-        "What is the contact of Bulacan State University"
+        "What is the contact of Bulacan State University",
+        "how can i reach the bulsu?",
+        "how can i get in touch with bulsu?",
+        "can i get the contact number of bulsu",
+        "can i get the email address of bulsu",
+        "can you give the contact number of bulsu"
       ],
       "responses": [
         "Hello! You can give us a call  919-7800 or send us an E-mail at officeofthepresident@bulsu.edu.ph",
@@ -985,7 +1340,8 @@
         "What is the Quality Policy of Bulacan State University?",
         "What is the Quality Policy of BulSU?",
         "Quality Policy of BulSU",
-        "Quality Policy of Bulacan State University"
+        "Quality Policy of Bulacan State University",
+        "Do you know what is the quality policy of bulsu? "
       ],
       "responses": [
         "random^random5"
@@ -1015,7 +1371,8 @@
         "University News",
         "Bulacan State University News",
         "News in Bulacan State University",
-        "News in BulSU"
+        "News in BulSU",
+        "Do Have latest news or updates in BulSU?"
       ],
       "responses": [
         "To know the University News you can visit https://bulsu.edu.ph/news/ "
@@ -1060,7 +1417,9 @@
         "BulSU Job Vacancies",
         "Bulacan State University Job Vacancies",
         "Available Job Vacancies",
-        "Available Jobs"
+        "Available Jobs",
+        "List of job vacancies in BulSU",
+        "List of vacancies of job in bulsu"
       ],
       "responses": [
         "To know the available Job Vacancies click this link https://bulsu.edu.ph/job-vacancies/ "
@@ -1077,7 +1436,11 @@
         "how many student Bulacan State University have?",
         "Bulsu current student population",
         "Bulacan State University current student population",
-        "Bulsu current number of student population"
+        "Bulsu current number of student population",
+        "How many students in bulsu campus",
+        "Number of students in bulsu?",
+        "How many students are enrolled in bulsu",
+        "Population of students enrolled in bulsu"
       ],
       "responses": [
         "populations^bulsu"
@@ -1091,7 +1454,10 @@
         "population of student in college of CAFA",
         "how many student CAFA have?",
         "CAFA current student population",
-        "CAFA current number of student population"
+        "CAFA current number of student population",
+        "Number of students in CAFA?",
+        "How many students are enrolled in CAFA",
+        "Population of students enrolled in CAFA"
       ],
       "responses": [
         "populations^CAFA"
@@ -1105,7 +1471,10 @@
         "population of student in college of CAL",
         "how many student CAL have?",
         "CAL current student population",
-        "CAL current number of student population"
+        "CAL current number of student population",
+        "Number of students in CAL?",
+        "How many students are enrolled in CAL",
+        "Population of students enrolled in CAL"
       ],
       "responses": [
         "populations^CAL"
@@ -1119,7 +1488,10 @@
         "population of student in college of CBA",
         "how many student CBA have?",
         "CBA current student population",
-        "CBA current number of student population"
+        "CBA current number of student population",
+        "Number of students in CBA?",
+        "How many students are enrolled in CBA",
+        "Population of students enrolled in CBA"
       ],
       "responses": [
         "populations^CBA"
@@ -1133,7 +1505,10 @@
         "population of student in college of CCJE",
         "how many student CCJE have?",
         "CCJE current student population",
-        "CCJE current number of student population"
+        "CCJE current number of student population",
+        "Number of students in CCJE?",
+        "How many students are enrolled in CCJE",
+        "Population of students enrolled in CCJE"
       ],
       "responses": [
         "populations^CCJE"
@@ -1147,7 +1522,10 @@
         "population of student in college of CHTM",
         "how many student CHTM have?",
         "CHTM current student population",
-        "CHTM current number of student population"
+        "CHTM current number of student population",
+        "Number of students in CHTM?",
+        "How many students are enrolled in CHTM",
+        "Population of students enrolled in CHTM"
       ],
       "responses": [
         "populations^CHTM"
@@ -1161,7 +1539,10 @@
         "population of student in college of CICT",
         "how many student CICT have?",
         "CICT current student population",
-        "CICT current number of student population"
+        "CICT current number of student population",
+        "Number of students in CICT?",
+        "How many students are enrolled in CICT",
+        "Population of students enrolled in CICT"
       ],
       "responses": [
         "populations^CICT"
@@ -1175,7 +1556,10 @@
         "population of student in college of CIT",
         "how many student CIT have?",
         "CIT current student population",
-        "CIT current number of student population"
+        "CIT current number of student population",
+        "Number of students in CIT?",
+        "How many students are enrolled in CIT",
+        "Population of students enrolled in CIT"
       ],
       "responses": [
         "populations^CIT"
@@ -1189,7 +1573,10 @@
         "population of student in college of Claw",
         "how many student Claw have?",
         "Claw current student population",
-        "Claw current number of student population"
+        "Claw current number of student population",
+        "Number of students in Claw?",
+        "How many students are enrolled in Claw",
+        "Population of students enrolled in Claw"
       ],
       "responses": [
         "populations^Claw"
@@ -1200,10 +1587,13 @@
       "tag": "population of student in college of CN",
       "database": "populations",
       "patterns": [
-        "population of student in college of CN",
-        "how many student CN have?",
-        "CN current student population",
-        "CN current number of student population"
+        "population of student in college of CON",
+        "how many student CON have?",
+        "CON current student population",
+        "CON current number of student population",
+        "Number of students in CON?",
+        "How many students are enrolled in CON",
+        "Population of students enrolled in CON"
       ],
       "responses": [
         "populations^CN"
@@ -1217,7 +1607,10 @@
         "population of student in college of COED",
         "how many student COED have?",
         "COED current student population",
-        "COED current number of student population"
+        "COED current number of student population",
+        "Number of students in COED?",
+        "How many students are enrolled in COED",
+        "Population of students enrolled in COED"
       ],
       "responses": [
         "populations^COED"
@@ -1231,7 +1624,10 @@
         "population of student in college of CAFA",
         "how many student CAFA have?",
         "CAFA current student population",
-        "CAFA current number of student population"
+        "CAFA current number of student population",
+        "Number of students in CAFA?",
+        "How many students are enrolled in CAFA",
+        "Population of students enrolled in CAFA"
       ],
       "responses": [
         "populations^CAFA"
@@ -1245,7 +1641,10 @@
         "population of student in college of CS",
         "how many student CS have?",
         "CS current student population",
-        "CS current number of student population"
+        "CS current number of student population",
+        "Number of students in CS?",
+        "How many students are enrolled in CS",
+        "Population of students enrolled in CS"
       ],
       "responses": [
         "populations^CS"
@@ -1259,7 +1658,10 @@
         "population of student in college of CSSP",
         "how many student CSSP have?",
         "CSSP current student population",
-        "CSSP current number of student population"
+        "CSSP current number of student population",
+        "Number of students in CSSP?",
+        "How many students are enrolled in CSSP",
+        "Population of students enrolled in CSSP"
       ],
       "responses": [
         "populations^CSSP"
@@ -1273,7 +1675,10 @@
         "population of student in Graduate school",
         "how many student Graduate school have?",
         "Graduate school current student population",
-        "Graduate school current number of student population"
+        "Graduate school current number of student population",
+        "Number of students in Graduate school?",
+        "How many students are enrolled in Graduate school",
+        "Population of students enrolled in Graduate school"
       ],
       "responses": [
         "populations^Graduate school"
@@ -1287,7 +1692,10 @@
         "population of student in college of COE",
         "how many student CACOEFA have?",
         "COE current student population",
-        "COE current number of student population"
+        "COE current number of student population",
+        "Number of students in COE?",
+        "How many students are enrolled in COE",
+        "Population of students enrolled in COE"
       ],
       "responses": [
         "populations^COE"
@@ -1299,7 +1707,8 @@
       "patterns": [
         "What is Irregular student?",
         "What is Irregular?",
-        "Meaning of Irregular Student?"
+        "Meaning of Irregular Student?",
+        "Can you explain what is Irregular student?"
       ],
       "responses": [
         "A irregular student is one who registered for formal credits but who carries less than the full load  for a given semester to complete the requirements of the given curriculum."
@@ -1312,7 +1721,8 @@
         "What is regular student?",
         "What is regular?",
         "regular student",
-        "Regular Student Meaning"
+        "Regular Student Meaning",
+        "Can you explain what is Regular student?"
       ],
       "responses": [
         "A regular student is one who registers for formal academic credits and who carries the full load for a given semester and curriculum."
@@ -1325,7 +1735,8 @@
         "What is shifter student?",
         "What is shifter?",
         "shifter student",
-        "Shifter Student Meaning"
+        "Shifter Student Meaning",
+        "Can you explain what is Shifter student?"
       ],
       "responses": [
         "A shifter student is one who enrolls from one course to another within the same or another college/ campusof the University."
@@ -1338,7 +1749,8 @@
         "What is transferee student?",
         "What is transferee?",
         "transferee student",
-        "Transferee meaning"
+        "Transferee meaning",
+        "Can you explain what is Transferee student?"
       ],
       "responses": [
         "A transferee student is one who had come from another recognized institution of higher learning and officially allowed to enroll to the same or another course in the University."
@@ -1405,7 +1817,12 @@
         "how to become a student of Bulacan State University",
         "grade requirements in bulsu",
         "Bulsu application Requirements",
-        "APPLICATION REQUIREMENTS"
+        "APPLICATION REQUIREMENTS",
+        "What are the requirements need in Admission for enrollment?",
+        "How to inquire in bulsu admission for enrollment",
+        "inquire in bulsu admission",
+        "inquire in admission",
+        "how to inquire in admission"
       ],
       "responses": [
         "To know about application requirements and grade requirements in Admission please click https://www.bulsu.edu.ph/admission/requirements.php"
@@ -1420,7 +1837,8 @@
         "dropping a subject?",
         "Process on how to drop a subject",
         "can i drop a subject?",
-        "how can i drop a subject?"
+        "how can i drop a subject?",
+        "can i drop a subject in the middle of semester?"
       ],
       "responses": [
         "Any student may officially drop his subject(s) until one (1) week before the midterm examinations as scheduled in the University calendar. The student must file the official dropping form at the Registrar's Office for this purpose."
@@ -1449,7 +1867,8 @@
         "how many minutes before i got mark as late?",
         "rule to be mark as late?",
         "How much time before i got mark as late?",
-        "number of time to be considered late"
+        "number of time to be considered late",
+        "minutes considered as late"
       ],
       "responses": [
         "A student shall be marked tardy if he arrives in the class 15 minutes after the start of the scheduled time.."
@@ -1463,7 +1882,8 @@
         "how many minutes before i got mark as absent?",
         "rule to be mark as absent?",
         "number of hours to be marked absent",
-        "how many minutes to be considered as absent"
+        "how many minutes to be considered as absent",
+        "number of time to considered as absent in a subject?"
       ],
       "responses": [
         "A student shall be marked absent from the class if he/shearrives 20 minutes after the start of the scheduled time. However, student must not be deprived of attending the lesson if he wishes."
@@ -1550,7 +1970,8 @@
       "tag": "What is Gold gear awards",
       "patterns": [
         "What is Gold gear awards?",
-        "Gold gear awards"
+        "Gold gear awards",
+        "Can you explain the gold gear awards?"
       ],
       "responses": [
         "The Gold Gear Awards is an annual recognitionprogramfor students for the formal awarding of academic  excellence, co-curricular and extra-curricular awards. The Office of the Dean for Student Affairs and Services in coordination with the different academic units of the University shall be responsible for the conduct of this program.."
@@ -1564,7 +1985,8 @@
         "What is The Presidents List Award?",
         "President List Award",
         "Bulsu President List Award",
-        "Presidents List Award"
+        "Presidents List Award",
+        "Can you explain the Presidents List awards?"
       ],
       "responses": [
         "The President's List Awardis given to students with a grade point average of 1.20-1.00 and no grade lower than 2.0 in any subject enrolled for the last two consecutive semesters prior to the award."
@@ -1577,10 +1999,11 @@
         "What is The Deans List Award?",
         "What is The Dean List Award?",
         "Deans List Award",
-        "Dean List Award"
+        "Dean List Award",
+        "Can you explain the Dean List Award"
       ],
       "responses": [
-        "The Dean's List Awardis given to students with a grade point average of 1.75-1.21 and no gradelower than 2.0 in any subject enrolled for the last two consecutive semesters prior to the award."
+        "The Dean's List Award is given to students with a grade point average of 1.75-1.21 and no gradelower than 2.0 in any subject enrolled for the last two consecutive semesters prior to the award."
       ],
       "context_set": ""
     },
@@ -1623,7 +2046,10 @@
       "patterns": [
         "What Competitor winners will get",
         "What is Competitor winners",
-        "what if i win competition?"
+        "what if i win competition?",
+        "what if i won competition?",
+        "what if i win in a competition?",
+        "What if i won in a competiton?"
       ],
       "responses": [
         "Competition Winners. This award shall be limited to achievements in connection with duly accredited competitions in the academic, trade skills, cultural, arts and sports to which students officially represent the university or any of its  units. The awards shall be categorized in terms of degree or level of performance attained by the students in duly accredited competition. as follows <br/> a. International Level 1st to 5th place winners <br/> b.National Level 1st to 3rd place winners <br/> c.Regional Level 1st and 2nd place winners and <br/> d.Provincial or Division 1st place winners."
@@ -1825,7 +2251,9 @@
         "is class is cancel today",
         "cancelation of classes today",
         "cancelation of classes",
-        "is class is cancel"
+        "is class is cancel",
+        "class suspension",
+        "class suspension today"
       ],
       "responses": [
         "calendar^cancel"
@@ -1879,7 +2307,10 @@
         "When is Midterm?",
         "When is Midterm examination?",
         "Midterm examination date",
-        "Date of Midterm examination"
+        "Date of Midterm examination",
+        "when the midterm exam start",
+        "when is the midterm exam will start",
+        "announcement about midterm exam"
       ],
       "responses": [
         "calendar^midterm"
@@ -1932,7 +2363,8 @@
         "School sem starts",
         "School semester starts",
         "School sem Open",
-        "School semester Open"
+        "School semester Open",
+        "semester start at"
       ],
       "responses": [
         "calendar^sem_open"
@@ -2150,7 +2582,10 @@
         "qualifications to become scholar in bulsu",
         "scholarship program by bulsu",
         "scholar",
-        "scholarship"
+        "scholarship",
+        "i need scholarship",
+        "scholarship offered by bulsu",
+        "scholarship offer by bulsu"
       ],
       "responses": [
         "random^random14"
@@ -3122,7 +3557,7 @@
         "thanks"
       ],
       "responses": [
-        "You're always wellcome.",
+        "You're always welcome.",
         "Welcome",
         "Im glad that I helped you"
       ],
