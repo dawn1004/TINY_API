@@ -1,0 +1,25 @@
+can i (have, ask)
+
+
+problem in the word "i need"
+
+
+
+
+
+
+
+
+
+    {
+      "tag": "undifined",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        "I have no response for that",
+        "I don't know that",
+        "Sorry I can't understand you."
+      ],
+      "context_set": ""
+    },
