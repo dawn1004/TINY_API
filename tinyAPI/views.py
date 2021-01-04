@@ -168,6 +168,78 @@ def addAction(transaction):
     new_action.save()
 
 
+def displayLandline(college):
+        try:
+            contact = Contact.objects.get(office_name=college)
+            return "If you want to get help in your concern you may contact {} at {}".format(college, contact.landline) if  contact.landline !="" else ""
+        except:
+            return ""
+
+
+def unidentifyAnswer(sentence):
+    if "CICT" in sentence.upper():
+        landline = displayLandline("College of Information and Communications Technology")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CAFA" in sentence.upper():
+        landline = displayLandline("College of Architecture and Fine Arts")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "LAW" in sentence.upper():
+        landline = displayLandline("College of Law")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CAL" in sentence.upper():
+        landline = displayLandline("College Of Arts And Letters")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CBA" in sentence.upper():
+        landline = displayLandline("College of Business Administration")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CCJE" in sentence.upper():
+        landline = displayLandline("College of Criminal Justice Education")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CHTM" in sentence.upper():
+        landline = displayLandline("College of Hospitality and Tourism Management")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "COE" in sentence.upper():
+        landline = displayLandline("College of Engineering")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CIT" in sentence.upper():
+        landline = displayLandline("College of Industrial Technology")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "COED" in sentence.upper():
+        landline = displayLandline("College of Education")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CON" in sentence.upper():
+        landline = displayLandline("College of Nursing")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CS" in sentence.upper():
+        landline = displayLandline("College of Science")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CSER" in sentence.upper():
+        landline = displayLandline("College of Sports, Exercise and Recreation")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "CSSP" in sentence.upper():
+        landline = displayLandline("College of Social Science And Philosophy")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "GRADUATE SCHOOL" in sentence.upper():
+        landline = displayLandline("Graduate School")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "Admission" in sentence.upper():
+        landline = displayLandline("Admission Office")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "MIS" in sentence.upper():
+        landline = displayLandline("MIS Office")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "REGISTRAR" in sentence.upper():
+        landline = displayLandline("Registrar Office")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "ACCOUNTING" in sentence.upper():
+        landline = displayLandline("Accounting Office")
+        return "Sorry, I don't understand. {}".format(landline)
+    elif "SCHOLAR" in sentence.upper():
+        landline = displayLandline("Scholar Office")
+        return "Sorry, I don't understand. {}".format(landline)
+    else:
+        return "Sorry, I don't understand"
+
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
 def sendQuery(request):
@@ -178,8 +250,8 @@ def sendQuery(request):
     results_index = numpy.argmax(results)
     tag = modelo.labels[results_index]
     ##adjust 
-    # print("see level: "+results[results_index])
-    if results[results_index] > 0.90: #97 dati yan ##98
+    print("see level: {}".format(results[results_index]))
+    if results[results_index] > 0.999: #97 dati yan ##98
         print("Percentage: {}".format(results[results_index]))
         for tg in modelo.data["intents"]:
             if tg['tag'] == tag:
@@ -187,7 +259,8 @@ def sendQuery(request):
 
         asnw = random.choice(responses)
     else:
-        asnw = random.choice(["Sorry I can't understand you.", "Sorry, I don't understand"])
+        asnw = unidentifyAnswer(inp)
+        # asnw = random.choice(["Sorry I can't understand you.", "Sorry, I don't understand"])
     tiny_response = {'response': asnw}
 
     if request.method == 'POST':
@@ -430,8 +503,8 @@ def forgetPassword(request):
             #send email
             msg = EmailMessage()
             msg['Subject'] = 'TInY admin password'
-            msg['From'] = 'dawn.bugay@gmail.com'
-            msg['To'] = 'dawn.bugay1004@gmail.com'
+            msg['From'] = 'bulsu.tiny@gmail.com'
+            msg['To'] = 'bulsu.tiny@gmail.com'
 
             msg.set_content('New Password: '+newpassword)
             msg.add_alternative("""\
@@ -472,7 +545,7 @@ def forgetPassword(request):
 
 
             with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-                smtp.login("dawn.bugay@gmail.com", "hxqzylnzpvjmrzfj")
+                smtp.login("bulsu.tiny@gmail.com", "qvbioekrgdfrqvho")
                 smtp.send_message(msg)
 
             ##sending response
@@ -487,7 +560,37 @@ def forgetPassword(request):
     except:
         return Response({'result': 'Server Error'})
 
+########################
 
+@api_view(['POST',])
+@permission_classes((IsAuthenticated,))
+def contactDevs(request):
+    try:
+        email = request.data["email"]
+        name = request.data["name"]
+        message = request.data["message"]
+
+        #send email
+        msg = EmailMessage()
+        msg['Subject'] = 'Someone querying about TInY API'
+        msg['From'] = 'bulsu.tiny@gmail.com'
+        msg['To'] = 'dawn.bugay@gmail.com'
+
+        msg.set_content('Sender Name: {} \n Sender Mailing Address: {} \n Message: {}'.format(name, email, message))
+
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login("bulsu.tiny@gmail.com", "qvbioekrgdfrqvho")
+            smtp.send_message(msg)
+
+        ##sending response
+        return Response({
+            'Message': "Sent Success", 
+        })
+    except:
+        return Response({'result': 'Server Error'})
+
+##########################
 
 
 

@@ -1,0 +1,1 @@
+web: gunicorn tinyProject.wsgi --log-file -

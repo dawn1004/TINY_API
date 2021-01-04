@@ -42,6 +42,7 @@ urlpatterns = [
     path('contacts/', views.getContacts),
     path("updateContact/", views.updateContact),
     path("forgetPassword/", views.forgetPassword),
+    path("contactDevs/", views.contactDevs),
 ]
 # username, password, name, intent
 # course_name, college, acronym, campus
