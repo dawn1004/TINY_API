@@ -27,3 +27,4 @@ tensorflow-serving-api-python3==1.5.0
 tflearn==0.3.2
 virtualenv==16.7.9
 whitenoise==5.0.1
+psycopg2==2.8.5
