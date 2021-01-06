@@ -3007,6 +3007,7 @@
         "tag": "how to enroll in bulsu",
         "patterns": [
           "how to enroll in bulsu",
+          "how to enroll",
           "Enrolment Procedure",
           "Process in enrollment",
           "Process in enrollment in bulsu",
@@ -3019,7 +3020,23 @@
           "random^random15"
         ],
         "context_set": ""
-      },        {
+      },
+      {
+        "tag": "how to shift in bulsu",
+        "patterns": [
+          "how to shift",
+          "how to shift a course",
+          "shift in another course",
+          "How to shift to another course",
+          "shift Procedure",
+          "Process in shifting course"
+        ],
+        "responses": [
+          "random^random16"
+        ],
+        "context_set": ""
+      },
+      {
         "tag": "CICT Contact",
         "database": "DepartmentContacts",
         "patterns": [
