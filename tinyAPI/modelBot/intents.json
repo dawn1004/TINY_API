@@ -1055,16 +1055,10 @@
           "what is the address of bulsu?",
           "what is the address of Bulacan state university?",
           "where is the location of bulsu main?",
-          "where is the location of bulsu?",
           "where can i find BulSU?",
-          "where can i find BulSU main?",
-          "where is the location of Bulacan state university main?",
           "address of bulsu",
           "address of Bulacan state university",
           "address of bulsu main",
-          "exact location of bulsu",
-          "exact location of bulsu main",
-          "exact location of Bulacan state university",
           "do you know where is bulsu location",
           "do you know where is bulsu main location",
           "do you know what is the address of bulsu",
@@ -1072,7 +1066,6 @@
           "do you know where to find bulsu main?",
           "do you know where to find bulsu?",
           "do you know where to find Bulacan state university?"
-  
         ],
         "responses": [
           "BulSU MAIN address is in Guinhawa, City of Malolos, Bulacan",
@@ -1215,7 +1208,7 @@
           "History of Bulacan State University"
         ],
         "responses": [
-          "The Bulacan State University started as an intermediate school in 1904 and has now progressed into one of the biggest educational institutions in Region III.To know more about BulSU visit https://bulsu.edu.ph/about/"
+          "The Bulacan State University started as an intermediate school in 1904 and has now progressed into one of the biggest educational institutions in Region III. To know more about BulSU visit https://bulsu.edu.ph/about/"
         ],
         "context_set": ""
       },
@@ -1302,8 +1295,8 @@
           "can you give the contact number of bulsu"
         ],
         "responses": [
-          "Hello! You can give us a call  919-7800 or send us an E-mail at officeofthepresident@bulsu.edu.ph",
-          "Good day! Our telephone number is 919-7800 and our E-mail is officeofthepresident@bulsu.edu.ph"
+          "Hello! You can give us a call  919-7800 or send us an e-mail at officeofthepresident@bulsu.edu.ph",
+          "Good day! Our telephone number is 919-7800 and our e-mail is officeofthepresident@bulsu.edu.ph"
         ],
         "context_set": ""
       },
@@ -3486,7 +3479,7 @@
           "Who is your Creator"
         ],
         "responses": [
-            "I am a capstone project that created by TInY API team. The TInY API team is lead by James Paul Nuque. The UI/UX Deisgner, Web Developer and Creator of TInY API and TInY Chatbot is Dawn Lemuel Bugay.The other members that help to contribute the research are Neil Adrian Torres, Jovito Tiglao and Shermel Sandoval."          
+            "I am a capstone project created by the TInY API team. The TInY API team is lead by James Paul Nuque. The UI/UX Designer, Web Developer and Creator of TInY API and TInY Chatbot is Dawn Lemuel Bugay. The other members that help to contribute to the research are Neil Adrian Torres, Jovito Tiglao, and Shermel Sandoval."          
         ],
         "context_set": ""
       },
@@ -3513,7 +3506,7 @@
           "tiny api usages"
         ],
         "responses": [
-            "To Know how to use TInY API you can check the official documentation of TInY API at TInYPI.com"          
+            "To know how to use TInY API you can check the official documentation of TInY API at bulsutiny.netlify.app . If you wish to contribute to TInY API you can visit the repository of TInY in Github at github.com/dawn1004/TINY_API."          
         ],
         "context_set": ""
       },
@@ -3640,8 +3633,8 @@
           "are you human"
         ],
         "responses": [
-          "I'm a Artificial intelligence bot programmed to answer only some of the frequent questions on the BulSU website and some of the questions about the campus.",
-          "Yes I am a robot, but I'm a good one. Let me prove it. How can I help you?"
+          "I'm an artificial intelligence bot programmed to answer only some of the frequent questions on the BulSU website and some of the questions about the campus.",
+          "Yes, I am a robot, but I'm a good one. Let me prove it. How can I help you?"
         ],
         "context_set": ""
       },
@@ -3668,7 +3661,7 @@
         ],
         "responses": [
           "What is that?",
-          "Yes what is that?"
+          "Yes, what is that?"
         ],
         "context_set": ""
       },
@@ -3725,7 +3718,7 @@
           "how to make account in portal"
         ],
         "responses": [
-          "To know how to register in BulSU Web Portal you may go in https://myportal.bulsu.edu.ph/how-to-use/registration/student"
+          "To know how to register in BulSU Web Portal you may go to https://myportal.bulsu.edu.ph/how-to-use/registration/student"
         ],
         "context_set": ""
       },
@@ -3748,7 +3741,7 @@
           "change my profile picture in bulsu portal"
         ],
         "responses": [
-          "To know how to modify your account in BulSU Web Portal you may go in https://myportal.bulsu.edu.ph/how-to-use/account/changing-your-profile-picture"
+          "To know how to modify your account in BulSU Web Portal you may go to https://myportal.bulsu.edu.ph/how-to-use/account/changing-your-profile-picture"
         ],
         "context_set": ""
       }
@@ -3767,7 +3760,7 @@
           "i cant login my account in portal"
         ],
         "responses": [
-          "if you forget you account you may go here and fill up the form https://myportal.bulsu.edu.ph/forgot <br> if this not solve your problem in your BulSU Portal account you may contact the MIS at (044)-91197-800 local 1065"
+          "if you forget your account you may go here and fill-up the form https://myportal.bulsu.edu.ph/forgot <br> if this not solve your problem in your BulSU portal account you may contact the MIS at (044)-91197-800 local 1065"
         ],
         "context_set": ""
       }

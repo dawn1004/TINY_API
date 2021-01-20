@@ -139,7 +139,7 @@ def findCalendar(target, userInput):
 
 
         except:
-            return "There is no yet announcement from the BulSU administration."
+            return "There is no yet announcement from the administration of BulSU."
 
     if (target == 'midterm' or target == 'finals'
             or target == 'entrance_exam' or target == 'sem_open' or target == 'sem_end'):
@@ -177,46 +177,46 @@ def displayLandline(college):
 
 
 def unidentifyAnswer(sentence):
-    if "CICT" in sentence.upper():
+    if "CICT " in sentence.upper():
         landline = displayLandline("College of Information and Communications Technology")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CAFA" in sentence.upper():
+    elif "CAFA " in sentence.upper():
         landline = displayLandline("College of Architecture and Fine Arts")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "LAW" in sentence.upper():
+    elif "LAW " in sentence.upper():
         landline = displayLandline("College of Law")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CAL" in sentence.upper():
+    elif "CAL " in sentence.upper():
         landline = displayLandline("College Of Arts And Letters")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CBA" in sentence.upper():
+    elif "CBA " in sentence.upper():
         landline = displayLandline("College of Business Administration")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CCJE" in sentence.upper():
+    elif "CCJE " in sentence.upper():
         landline = displayLandline("College of Criminal Justice Education")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CHTM" in sentence.upper():
+    elif "CHTM " in sentence.upper():
         landline = displayLandline("College of Hospitality and Tourism Management")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "COE" in sentence.upper():
+    elif "COE " in sentence.upper():
         landline = displayLandline("College of Engineering")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CIT" in sentence.upper():
+    elif "CIT " in sentence.upper():
         landline = displayLandline("College of Industrial Technology")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "COED" in sentence.upper():
+    elif "COED " in sentence.upper():
         landline = displayLandline("College of Education")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CON" in sentence.upper():
+    elif "CON " in sentence.upper():
         landline = displayLandline("College of Nursing")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CS" in sentence.upper():
+    elif "CS " in sentence.upper():
         landline = displayLandline("College of Science")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CSER" in sentence.upper():
+    elif "CSER " in sentence.upper():
         landline = displayLandline("College of Sports, Exercise and Recreation")
         return "Sorry, I don't understand. {}".format(landline)
-    elif "CSSP" in sentence.upper():
+    elif "CSSP " in sentence.upper():
         landline = displayLandline("College of Social Science And Philosophy")
         return "Sorry, I don't understand. {}".format(landline)
     elif "GRADUATE SCHOOL" in sentence.upper():
@@ -238,7 +238,7 @@ def unidentifyAnswer(sentence):
         landline = displayLandline("Scholar Office")
         return "Sorry, I don't understand. {}".format(landline)
     else:
-        return "Sorry, I don't understand"
+        return "Sorry, I don't understand."
 
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
