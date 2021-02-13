@@ -82,3 +82,8 @@ class ChatbotSettings(models.Model):
     key = models.CharField(max_length=150)
     message = models.CharField(max_length=150, default="")
     is_disable = models.BooleanField(max_length=150, default=False)
+
+
+class BetaTest(models.Model):
+    message = models.CharField(max_length=1000)
+    accuracy = models.CharField(max_length=100)

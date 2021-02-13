@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action, ChatbotSettings, Contact
+from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action, ChatbotSettings, Contact, BetaTest
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -44,6 +44,9 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ("id", "office_name", "email", "facebook", "landline", "college_secretary", "ref")
 
 
+class BetaTestAdmin(admin.ModelAdmin):
+    list_display = ('message', 'accuracy')
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Calendar, CalendarAdmin)
 admin.site.register(userIntent, userIntentAdmin)
@@ -56,3 +59,4 @@ admin.site.register(Random, RandomAdmin)
 admin.site.register(Action, ActionAdmin)
 admin.site.register(ChatbotSettings, ChatbotSettingsAdmin)
 admin.site.register(Contact, ContactAdmin)
+admin.site.register(BetaTest, BetaTestAdmin)

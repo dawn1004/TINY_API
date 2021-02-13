@@ -15,7 +15,7 @@ from rest_framework.authtoken.models import Token
 from .serializers import TinyResponseSerializer, CourseSerializer, ExecutiveSerializer, DeanSerializer, PopulationSerializer, RandomSerializer, UserSerializer, ActionSerializer, CalendarSerializer, AuthTokenSerializer, ChatbotSettingsSerializer, MySerializer, ContactSerializer
 # from rest_framework import viewsets
 
-from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action, ChatbotSettings, Contact
+from . models import Question, Calendar, userIntent, Course, Executive, Dean, Population, Random, Action, ChatbotSettings, Contact, BetaTest
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
@@ -261,6 +261,10 @@ def sendQuery(request):
     else:
         asnw = unidentifyAnswer(inp)
         # asnw = random.choice(["Sorry I can't understand you.", "Sorry, I don't understand"])
+        BetaTest.objects.create(
+            message=inp,
+            accuracy=results[results_index]
+        )
     tiny_response = {'response': asnw}
 
     if request.method == 'POST':
