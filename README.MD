@@ -30,12 +30,9 @@ if you found this very useful, Please don't forget to star this repo! 🌱 A roo
 
 ## CONTRIBUTING GUIDELINES
 ## Set up
-1. We using Python Django as a server stack. You need to install python and PIP in your system.
-2. After installing python and pip you can now install your dependencies. (but i do suggest that to create a virtual environment for your dependencies)
 ```
 pip install -r requirements.txt
 ```
-3. Set up your database.
 
 
 ## Author: Dawn Lemuel Bugay
