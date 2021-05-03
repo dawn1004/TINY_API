@@ -1,5 +1,4 @@
-# Bulacan State University TInY API
-
+# Bulacan State University TInY APIs
 
 This API aims to give the basic information of Bulacan State University (BulSU) and this is best for making an application that needed information related to BulSU. It provides information such as BulSU Calendar, the course offered by BulSU, names of Executives and deans in BulSU, Contacts of each college/department office, the population of students in BulSU, 
 and you can also send a message to TInY Chatbot and you will get a response quickly. This API is not only design for making a real application you can use this too in prototyping websites to practice your skills. If you want to learn more about TInY API you can visit [official documentation of TInY API](https://bulsutiny.netlify.app/)
