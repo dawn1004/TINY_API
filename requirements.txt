@@ -21,7 +21,7 @@ pylint==2.6.0
 PyYAML==5.1.2
 requests==2.21.0
 tensorboard==2.1.0
-tensorflow==1.5.0
+tensorflow==2.6.4
 tensorflow-estimator==2.1.0
 tensorflow-serving-api-python3==1.5.0
 tflearn==0.3.2
